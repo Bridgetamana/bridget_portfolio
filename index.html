@@ -3,21 +3,127 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bridget Amana</title>
+    <title>My Tech Goals | Bridget Amana</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
   </head>
   <body>
-    <header>My Tech Goals for the next 2 years</header>
+    <header>
+      <p>My Tech Goals for the next 2 years</p>
+    </header>
     <main>
-      <section></section>
-      <section>
-        <!-- GOALS -->
-        <div></div>
-        <!-- TIME -->
-        <div></div>
-        <!-- USEFUL LINKS -->
-        <div></div>
-      </section>
+      <div class="main-section">
+        <section class="profile-section">
+          <div class="profile-img">
+            <img
+              src="./images/bridget-photo.jpg"
+              alt="Bridget's Slack Profile Picture"
+              data-testid="slackProfilePicture"
+            />
+          </div>
+          <div class="profile-details">
+            <h2 class="name" data-testid="slackDisplayName">Bridget Amana</h2>
+            <p class="title">
+              Frontend Developer
+            </p>
+            <p data-testid="slackEmail" class="email">
+              amanabridget03@gmail.com
+            </p>
+            <p class="bio">
+              I'm a creative front-end developer on a journey to becoming a
+              full-stack developer.
+            </p>
+          </div>
+        </section>
+        <section>
+          <!-- GOALS -->
+          <div class="goals-wrapper">
+            <h2>Goals</h2>
+
+            <ul class="timeline">
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <p class="timeline-content">
+                  Become a top LinkedIn voice in my field.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <p class="timeline-content">Expand network and influence.</p>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <p class="timeline-content">
+                  Be an active open source contributor
+                </p>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <p class="timeline-content">
+                  Lead the development of innovative projects.
+                </p>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <p class="timeline-content">Learn continuously</p>
+              </li>
+            </ul>
+          </div>
+          <!-- TIME -->
+          <div>
+            <ul class="time-info-wrapper">
+              <li 
+              class="time" data-testid="currentTimeUTC">
+              <b>Current Time in UTC:</b>
+                 <span id="currentTimeUTC"></span>
+              </li>
+              <li class="time"  data-testid="currentDay">
+                <b>Current Day of the week: </b>
+                <span id="currentDay"></span>
+              </li>
+            </ul>
+          </div>
+          <!-- USEFUL LINKS -->
+          <div>
+              <ul class="links-wrapper">
+              <li data-testid="hngLink">
+                  <a
+                  href="https://hng.tech/learn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >HNG Learn</a
+                  >
+              </li>
+              <li data-testid="scrapeanywebLink">
+                  <a
+                  href="https://scrapeanyweb.site"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Scrape Any Web</a
+                  >
+              </li>
+              <li data-testid="keywordLink">
+                  <a
+                  href="https://keyword.dog"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >KeyWord Dog</a
+                  >
+              </li>
+              </ul>
+          </div>
+        </section>
+      </div>
+      <div class="attribute">
+        Designed and built by &nbsp<a
+          href="https://github.com/Bridgetamana"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Bridget Amana</a
+        >
+      </div>
     </main>
+    <!-- JAVASCRIPT -->
+    <script src="script.js"></script>
   </body>
 </html>
