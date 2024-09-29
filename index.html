@@ -3,127 +3,243 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Tech Goals | Bridget Amana</title>
+    <title>Bridget Amana | Frontend Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Bridget Amana"
+    />
+    <meta
+      name="keywords"
+      content="Bridget Amana, Bridget, Amana, frontend developer, web developer, portfolio, developer, creative developer"
+    />
+    <meta name="author" content="Bridget Amana" />
+    <meta
+      property="og:title"
+      content="Bridget Amana | Frontend Developer Portfolio"
+    />
+    <meta
+      property="og:description"
+      content="Explore my portfolio, showcasing my skills and projects as a frontend developer."
+    />
+    <meta property="og:image" content="./images/bridget-photo.jpg" />
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Bridget Amana | Frontend Developer Portfolio"
+    />
+    <meta
+      name="twitter:description"
+      content="Explore my portfolio, showcasing my skills and projects as a frontend developer."
+    />
+    <meta name="twitter:image" content="./images/bridget-photo.jpg" />
+    <link
+      rel="shortcut icon"
+      href="./images/favicon-32x32.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="styles.css" />
-    <link rel="shortcut icon" href="./images/favicon-32x32.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <header>
-      <p>My Tech Goals for the next 2 years</p>
-    </header>
-    <main>
-      <div class="main-section">
-        <section class="profile-section">
-          <div class="profile-img">
-            <img
-              src="./images/bridget-photo.jpg"
-              alt="Bridget's Slack Profile Picture"
-              data-testid="slackProfilePicture"
-            />
-          </div>
-          <div class="profile-details">
-            <h2 class="name" data-testid="slackDisplayName">Bridget Amana</h2>
-            <p class="title">
-              Frontend Developer
-            </p>
-            <p data-testid="slackEmail" class="email">
-              amanabridget03@gmail.com
-            </p>
-            <p class="bio">
-              I'm a creative front-end developer on a journey to becoming a
-              full-stack developer.
-            </p>
-          </div>
-        </section>
-        <section>
-          <!-- GOALS -->
-          <div class="goals-wrapper">
-            <h2>Goals</h2>
 
-            <ul class="timeline">
-              <li class="timeline-item">
-                <div class="timeline-marker"></div>
-                <p class="timeline-content">
-                  Become a top LinkedIn voice in my field.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-marker"></div>
-                <p class="timeline-content">Expand network and influence.</p>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-marker"></div>
-                <p class="timeline-content">
-                  Be an active open source contributor
-                </p>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-marker"></div>
-                <p class="timeline-content">
-                  Lead the development of innovative projects.
-                </p>
-              </li>
-              <li class="timeline-item">
-                <div class="timeline-marker"></div>
-                <p class="timeline-content">Learn continuously</p>
-              </li>
-            </ul>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <p>B / A</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">About /</a></li>
+          <li><a href="#projects"> Project /</a></li>
+          <li><a href="#work">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section id="hero">
+        <div class="avatar">
+          <img
+            src="./images/bridget-photo.jpg"
+            alt="Bridget's avatar"
+            loading="lazy"
+          />
+        </div>
+        <h1>Bio .</h1>
+        <p>
+          <span>Hello</span>, I'm a
+          <span class="highlight">Creative</span> front-end developer on a
+          journey to becoming a full-stack developer.
+          front-end developer on a
+          journey to becoming a full-stack developer.
+        </p>
+        <br/>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus asperiores quia totam tenetur ipsum illo itaque alias adipisci culpa nulla corporis, aut deserunt magni enim laborum iure excepturi rerum veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla nemo dolor dicta quidem id odit voluptatum, porro asperiores ab illum repellat quis quia, unde numquam cumque soluta saepe repellendus commodi!</p>
+      </section>
+      <section>
+        <h1>Skills .</h1>
+        <ul class="skill-container">
+          <li class="skills">HTML<span class="border-bottom"></span></li>
+          <li class="skills">CSS<span class="border-bottom"></span></li>
+          <li class="skills">JavaScript<span class="border-bottom"></span></li>
+          <li class="skills">TypeScript<span class="border-bottom"></span></li>
+          <li class="skills">SASS<span class="border-bottom"></span></li>
+          <li class="skills">React<span class="border-bottom"></span></li>
+          <li class="skills">NextJs<span class="border-bottom"></span></li>
+        </ul>
+      </section>
+      <section id="projects">
+        <h1>Projects .</h1>
+        <div class="projects-container">
+          <div class="project-card">
+            <span class="desc-heading">001</span>
+            <div class="project-desc">
+              <span>
+                <p class="desc-heading">Name</p>
+                <p class="desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur velit est odio porro sint sapiente qui distinctio fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi, quae, provident maxime dolores aspernatur?</p>
+                <span class="bottom-desc">
+                  <span class="tag-wrapper">
+                    <p class="tag">html</p>
+                    <p class="tag">html</p>
+                  </span>
+                  <a href="">Visit site</a>
+                </span>
+              </span>
+              <div>
+                <img
+                  src="./images/bridget-photo.jpg"
+                  alt="Project Screenshot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
-          <!-- TIME -->
-          <div>
-            <ul class="time-info-wrapper">
-              <li 
-              class="time" data-testid="currentTimeUTC">
-              <b>Current Time in UTC:</b>
-                 <span id="currentTimeUTC"></span>
-              </li>
-              <li class="time"  data-testid="currentDay">
-                <b>Current Day of the week: </b>
-                <span id="currentDay"></span>
-              </li>
-            </ul>
+          <span class="border-bottom"></span>
+          <div class="project-card">
+            <span class="desc-heading">001</span>
+            <div class="project-desc">
+              <span>
+                <p class="desc-heading">Name</p>
+                <p class="desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur velit est odio porro sint sapiente qui distinctio fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi, quae, provident maxime dolores aspernatur?</p>
+                <span class="bottom-desc">
+                  <span class="tag-wrapper">
+                    <p class="tag">html</p>
+                    <p class="tag">html</p>
+                  </span>
+                  <a href="">Visit site</a>
+                </span>
+              </span>
+              <div>
+                <img
+                  src="./images/bridget-photo.jpg"
+                  alt="Project Screenshot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
-          <!-- USEFUL LINKS -->
-          <div>
-              <ul class="links-wrapper">
-              <li data-testid="hngLink">
-                  <a
-                  href="https://hng.tech/learn"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >HNG Learn</a
-                  >
-              </li>
-              <li data-testid="scrapeanywebLink">
-                  <a
-                  href="https://scrapeanyweb.site"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >Scrape Any Web</a
-                  >
-              </li>
-              <li data-testid="keywordLink">
-                  <a
-                  href="https://keyword.dog"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  >KeyWord Dog</a
-                  >
-              </li>
-              </ul>
+          <span class="border-bottom"></span>
+          <div class="project-card">
+            <span class="desc-heading">001</span>
+            <div class="project-desc">
+              <span>
+                <p class="desc-heading">Name</p>
+                <p class="desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur velit est odio porro sint sapiente qui distinctio fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi, quae, provident maxime dolores aspernatur?</p>
+                <span class="bottom-desc">
+                  <span class="tag-wrapper">
+                    <p class="tag">html</p>
+                    <p class="tag">html</p>
+                  </span>
+                  <a href="">Visit site</a>
+                </span>
+              </span>
+              <div>
+                <img
+                  src="./images/bridget-photo.jpg"
+                  alt="Project Screenshot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
           </div>
-        </section>
-      </div>
-      <div class="attribute">
-        Designed and built by &nbsp<a
-          href="https://github.com/Bridgetamana"
-          target="_blank"
-          rel="noopener noreferrer"
-          >Bridget Amana</a
-        >
-      </div>
+          <span class="border-bottom"></span>
+          <div class="project-card">
+            <span class="desc-heading">001</span>
+            <div class="project-desc">
+              <span>
+                <p class="desc-heading">Name</p>
+                <p class="desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur velit est odio porro sint sapiente qui distinctio fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi, quae, provident maxime dolores aspernatur?</p>
+                <span class="bottom-desc">
+                  <span class="tag-wrapper">
+                    <p class="tag">html</p>
+                    <p class="tag">html</p>
+                  </span>
+                  <a href="">Visit site</a>
+                </span>
+              </span>
+              <div>
+                <img
+                  src="./images/bridget-photo.jpg"
+                  alt="Project Screenshot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <span class="border-bottom"></span>
+          <div class="project-card">
+            <span class="desc-heading">001</span>
+            <div class="project-desc">
+              <span>
+                <p class="desc-heading">Name</p>
+                <p class="desc-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur velit est odio porro sint sapiente qui distinctio fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi, quae, provident maxime dolores aspernatur?</p>
+                <span class="bottom-desc">
+                  <span class="tag-wrapper">
+                    <p class="tag">html</p>
+                    <p class="tag">html</p>
+                  </span>
+                  <a href="">Visit site</a>
+                </span>
+              </span>
+              <div>
+                <img
+                  src="./images/bridget-photo.jpg"
+                  alt="Project Screenshot"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+          <span class="border-bottom"></span>
+        </div>
+      </section>
     </main>
-    <!-- JAVASCRIPT -->
-    <script src="script.js"></script>
+
+    <footer>
+      <div class="top">
+        <h2></h2>
+      </div>
+      <div class="bottom">
+        <ul class="socials">
+          <li class="social links">Twitter</li>
+          <li class="social links">LinkedIn</li>
+          <li class="social links">Github</li>
+        </ul>
+        <div>
+          <p>Developed by yours truly</p>
+        </div>
+      </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+      <div class="circle" id="circle" title="toggle color"></div>
+    </button>
+
+    <script src="script.js" defer></script>
   </body>
 </html>

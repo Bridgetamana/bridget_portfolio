@@ -1,11 +1,18 @@
-function updateTime() {
-    const now = new Date();
-    const utcTime = now.toUTCString();
-    const currentDay = now.toLocaleDateString("en-US", { weekday: "long" });
+const circle = document.getElementById('circle');
+const body = document.body;
+const savedTheme = localStorage.getItem('theme');
 
-    document.getElementById("currentTimeUTC").textContent = utcTime;
-    document.getElementById("currentDay").textContent = currentDay;
+if (savedTheme) {
+  body.classList.toggle('dark-mode', savedTheme === 'dark');
 }
-
-updateTime();
-setInterval(updateTime, 1000);
+circle.addEventListener('click', function() {
+  const isDarkMode = body.classList.toggle('dark-mode');
+  
+  localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
+  
+  if (isDarkMode) {
+    circle.style.transform = 'rotate(180deg)';
+  } else {
+    circle.style.transform = 'rotate(0)'
+  }
+});
