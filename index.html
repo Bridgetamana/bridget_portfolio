@@ -47,12 +47,22 @@
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stylish&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e1c45fbebb.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
 
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
-      <p>B / A</p>
+      <a href="/">B / A</a>
       <nav>
         <ul class="nav-links">
           <li><a href="#hero">About /</a></li>
@@ -64,33 +74,63 @@
 
     <main id="main-content">
       <section id="hero">
-        <div class="avatar">
-          <img
-            src="./images/bridget-photo.jpg"
-            alt="Bridget's avatar"
-            loading="lazy"
-          />
+        <div class="hero-container">
+          <div class="frontend-pill">Frontend Developer</div>
+          <h1 class="hero-text">
+            <span>P</span>
+            <span></span>
+            <span>r</span>
+            <span>t</span>
+            <span>f</span>
+            <span></span>
+            <span>l</span>
+            <span>i</span>
+            <span>o</span>
+          </h1>
         </div>
-        <h1>Bio .</h1>
-        <p>
-          <span>Hello</span>, I'm a
-          <span class="highlight">Creative</span> front-end developer on a
-          journey to becoming a full-stack developer. front-end developer on a
-          journey to becoming a full-stack developer.
-        </p>
-        <br />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          asperiores quia totam tenetur ipsum illo itaque alias adipisci culpa
-          nulla corporis, aut deserunt magni enim laborum iure excepturi rerum
-          veritatis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Nulla nemo dolor dicta quidem id odit voluptatum, porro asperiores ab
-          illum repellat quis quia, unde numquam cumque soluta saepe repellendus
-          commodi!
-        </p>
+        <h2>Bio .</h2>
+        <div class="bio">
+          <div class="bio-text">
+            <p>
+              <span>Hello</span>, I'm a
+              <span class="circled-text">Creative</span> front-end
+              <span class="zigzag-underline">developer</span> on a journey to becoming a full-stack developer. 
+            </p>
+            
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+              asperiores quia totam tenetur ipsum illo itaque alias adipisci
+              culpa nulla corporis, aut deserunt magni enim laborum iure
+              excepturi rerum veritatis. Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Nulla nemo dolor dicta quidem id odit
+              voluptatum, porro asperiores ab illum repellat quis quia, unde
+              numquam cumque soluta saepe repellendus commodi!
+            </p>
+          </div>
+          <div class="polaroid">
+            <img
+              src="./images/bridget-photo.jpg"
+              alt="Bridget's avatar"
+              loading="lazy"
+            />
+            <div class="polaroid-text">
+              <div class="polaroid-name">
+                <p class="name">Bridget</p>
+                <p class="pronoun">.she/her</p>
+              </div>
+              <div class="polaroid-details">
+                <i class="fa-solid fa-location-dot"></i> Lagos
+              </div>
+              <div class="polaroid-details">
+                <i class="fa-solid fa-envelope"></i> amanabridget03@gmail.com
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
       <section>
-        <h1>Skills .</h1>
+        <h2>Skills .</h2>
         <ul class="skill-container">
           <li class="skills">HTML<span class="border-bottom"></span></li>
           <li class="skills">CSS<span class="border-bottom"></span></li>
@@ -101,8 +141,29 @@
           <li class="skills">NextJs<span class="border-bottom"></span></li>
         </ul>
       </section>
+      <section class="what-i-can-do">
+        <h2>What I Can Do</h2>
+        <div class="service-box-container">
+          <div class="service-box">
+            <h3>Responsive Design</h3>
+            <span class="border-bottom"></span>
+            <p>I can build responsive and accessible websites that look great on any device.</p>
+          </div>
+          <div class="service-box">
+            <h3>Performance Optimization</h3>
+            <span class="border-bottom"></span>
+            <p>I optimize websites to load faster and ensure better performance on various networks.</p>
+          </div>
+          <div class="service-box">
+            <h3>UI/UX Enhancement</h3>
+            <span class="border-bottom"></span>
+            <p>Improve user experience by crafting intuitive and user-friendly interfaces.</p>
+          </div>
+        </div>
+      </section>
+      
       <section id="projects">
-        <h1>Projects .</h1>
+        <h2>Projects .</h2>
         <div class="projects-container">
           <div class="project-card">
             <span class="desc-heading">001</span>
@@ -120,7 +181,7 @@
                     <p class="tag">html</p>
                     <p class="tag">html</p>
                   </span>
-                  <a href="">Visit site</a>
+                  <a href="" class="link">Visit site</a>
                 </span>
               </span>
               <div>
