@@ -94,17 +94,17 @@ body:before {
 
 main {
   width: 95%;
-  max-width: 80rem;
+  max-width: 70rem;
   margin: 0 auto;
 }
 
-section {
+#hero, #skills, #projects {
   padding: 2rem 2.5vw;
 }
 
 header {
   width: 95%;
-  max-width: 80rem;
+  max-width: 70rem;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -127,26 +127,18 @@ nav > ul {
 }
 
 .nav-links li {
-  text-decoration: none;
-  position: relative;
-  padding: 5px 0;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 3px 2px;
 }
 
-.nav-links li::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background-color: #7e78d2;
-  transition: width 0.3s ease, left 0.3s ease;
+.nav-links:hover li a {
+  opacity: 0.5;
 }
 
-.nav-links li:hover::after {
-  width: 100%;
-  left: 0;
+.nav-links li:hover a {
+  opacity: 1;
 }
 
 .hero-container {
@@ -540,15 +532,81 @@ h2 {
 
 footer {
   width: 95%;
-  max-width: 60rem;
+  max-width: 70rem;
   margin: 0 auto;
+  margin-top: 4rem;
 }
 
-footer > div {
+.cta-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  font-size: larger;
+  flex-direction: column;
+  justify-content: center;
+  width: 95%;
+  max-width: 70rem;
+  margin-bottom: 30px;
+}
+
+.cta-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cta-container p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: 'Kalam', cursive;
+}
+
+.cta-button {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
+
+
+.socials {
+  width: 100%;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.socials li {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 0 2px;
+  transition: opacity 0.3s ease;
+}
+
+.socials:hover li  {
+  opacity: 0.5;
+}
+
+.socials li:hover  {
+  opacity: 1;
+}
+
+.attribute {
+  width: 100%;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 14px;
+  line-height: 1.5;
+  opacity: 0.6;
 }
 
 .container {
@@ -558,7 +616,6 @@ footer > div {
 }
 
 @media (min-width: 500px) {
-
   .hero-text {
     letter-spacing: 12px;
   }
@@ -591,12 +648,24 @@ footer > div {
     grid-column: 8 / 13;
   }
 
-  .single-project:nth-child(6n + 4) {
+  .single-project:nth-child(6n + 3) {
     grid-column: 1 / 6;
   }
 
-  .single-project:nth-child(6n + 5) {
+  .single-project:nth-child(6n + 4) {
     grid-column: 6 / 13;
+  }
+
+  .footer-bottom {
+    display: flex;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .attribute {
+    text-align: right;
   }
 }
 

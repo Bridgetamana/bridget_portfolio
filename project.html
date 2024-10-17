@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Details | Bridget Amana's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Stylish&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="project-styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <a href="/">B / A</a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#hero">About /</a></li>
+          <li><a href="#projects">Project /</a></li>
+          <li><a href="#work">Work</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <a href="/" class="go-back-button">Back to Portfolio</a>
+      <section class="project-details" id="project-details">
+        <h1 id="project-title"></h1>
+        <div class="project-intro">
+          <h3 class="tools">Project description:</h3>
+          <p id="project-description"></p>
+          <div class="more-info">
+            <div>
+              <h3 class="tools">Technology</h3>
+              <ul id="project-tools"></ul>
+            </div>
+            <div>
+              <h3 class="links">Links:</h3>
+              <ul class="link-wrapper">
+                <li>
+                  <a id="project-demo" href="#" target="_blank">website</a>
+                </li>
+                <li>
+                  <a id="project-repo" href="#" target="_blank"
+                    >View on GitHub</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <img id="project-image" src="" alt="Project Screenshot" />
+
+        <a id="prev-project" class="nav-arrow prev-arrow">←</a>
+        <a id="next-project" class="nav-arrow next-arrow">→</a>
+      </section>
+    </main>
+
+    <footer>
+      <div class="top">
+        <h2></h2>
+      </div>
+      <div class="footer-bottom">
+        <ul class="socials">
+          <li>Twitter /</li>
+          <li>LinkedIn /</li>
+          <li>Github</li>
+        </ul>
+        <p class="attribute">Developed by yours truly</p>
+      </div>
+    </footer>
+
+    <button id="dark-mode-toggle" class="dark-mode-toggle">
+      <div class="circle" id="circle" title="toggle color"></div>
+    </button>
+
+    <script src="project.js" defer></script>
+  </body>
+</html>
