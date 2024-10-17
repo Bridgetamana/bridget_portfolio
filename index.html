@@ -23,7 +23,6 @@
       content="Explore my portfolio, showcasing my skills and projects as a frontend developer."
     />
     <meta property="og:image" content="./images/bridget-photo.jpg" />
-    <meta property="og:url" content="" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -40,23 +39,17 @@
       href="./images/favicon-32x32.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Stylish&display=swap"
       rel="stylesheet"
     />
     <script
       src="https://kit.fontawesome.com/e1c45fbebb.js"
       crossorigin="anonymous"
+      defer
     ></script>
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -66,7 +59,7 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#hero">About /</a></li>
-          <li><a href="#projects"> Project /</a></li>
+          <li><a href="#projects">Project /</a></li>
           <li><a href="#work">Work</a></li>
         </ul>
       </nav>
@@ -93,8 +86,8 @@
           <div class="bio-text">
             <p>
               <span>Hello</span>, I'm a
-              <span class="circled-text">Creative</span> front-end
-              <span class="zigzag-underline">developer</span> on a journey to becoming a full-stack developer. 
+              <span class="circled-text">Creative</span> front-end developer
+              <span class="zigzag-underline">on a journey to full-stack</span>.
             </p>
             
             <br />
@@ -113,6 +106,8 @@
               src="./images/bridget-photo.jpg"
               alt="Bridget's avatar"
               loading="lazy"
+              width="300"
+              height="300"
             />
             <div class="polaroid-text">
               <div class="polaroid-name">
@@ -129,6 +124,8 @@
           </div>
         </div>
       </section>
+
+      <!-- Skills Section -->
       <section>
         <h2>Skills .</h2>
         <ul class="skill-container">
@@ -141,177 +138,128 @@
           <li class="skills">NextJs<span class="border-bottom"></span></li>
         </ul>
       </section>
-      <section class="what-i-can-do">
-        <h2>What I Can Do</h2>
-        <div class="service-box-container">
-          <div class="service-box">
-            <h3>Responsive Design</h3>
-            <span class="border-bottom"></span>
-            <p>I can build responsive and accessible websites that look great on any device.</p>
-          </div>
-          <div class="service-box">
-            <h3>Performance Optimization</h3>
-            <span class="border-bottom"></span>
-            <p>I optimize websites to load faster and ensure better performance on various networks.</p>
-          </div>
-          <div class="service-box">
-            <h3>UI/UX Enhancement</h3>
-            <span class="border-bottom"></span>
-            <p>Improve user experience by crafting intuitive and user-friendly interfaces.</p>
-          </div>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>Projects .</h2>
+        <div class="container">
+          <a href="project.html?id=1" class="single-project">
+            <div class="project-img">
+              <ul class="project-tools">
+                <li>html</li>
+                <li>css</li>
+              </ul>
+              <img
+                src="./images/bridget-photo.jpg"
+                alt="Project 1"
+                loading="lazy"
+                width="300"
+                height="200"
+              />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Project Name 1</p>
+              <p class="project-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Necessitatibus quo temporibus,
+              </p>
+            </div>
+          </a>
+
+          <!-- Second Project -->
+          <a href="project.html?id=2" class="single-project">
+            <div class="project-img">
+              <ul class="project-tools">
+                <li>React</li>
+                <li>CSS</li>
+              </ul>
+              <img
+                src="./images/bridget-photo.jpg"
+                alt="Project 2"
+                loading="lazy"
+                width="300"
+                height="200"
+              />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Project Name 1</p>
+              <p class="project-desc">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Necessitatibus quo temporibus,              </p>
+            </div>
+          </a>
+
+          <!-- Third Project -->
+          <a href="project.html?id=3" class="single-project">
+            <div class="project-img">
+              <ul class="project-tools">
+                <li>React</li>
+                <li>CSS</li>
+              </ul>
+              <img
+                src="./images/bridget-photo.jpg"
+                alt="Project 2"
+                loading="lazy"
+                width="300"
+                height="200"
+              />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Project Name 1</p>
+              <p class="project-desc">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Necessitatibus quo temporibus,              </p>
+            </div>
+          </a>
+
+          <!-- Fourth Project -->
+          <a href="project.html?id=4" class="single-project">
+            <div class="project-img">
+              <ul class="project-tools">
+                <li>React</li>
+                <li>CSS</li>
+              </ul>
+              <img
+                src="./images/bridget-photo.jpg"
+                alt="Project 2"
+                loading="lazy"
+                width="300"
+                height="200"
+              />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Project Name 1</p>
+              <p class="project-desc">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Necessitatibus quo temporibus,              </p>
+            </div>
+          </a>
+
+          <!-- Five Project -->
+          <a href="project.html?id=2" class="single-project">
+            <div class="project-img">
+              <ul class="project-tools">
+                <li>React</li>
+                <li>CSS</li>
+              </ul>
+              <img
+                src="./images/bridget-photo.jpg"
+                alt="Project 2"
+                loading="lazy"
+                width="300"
+                height="200"
+              />
+            </div>
+            <div class="project-info">
+              <p class="project-title">Project Name 1</p>
+              <p class="project-desc">
+Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Necessitatibus quo temporibus,              </p>
+            </div>
+          </a>
         </div>
       </section>
       
-      <section id="projects">
-        <h2>Projects .</h2>
-        <div class="projects-container">
-          <div class="project-card">
-            <span class="desc-heading">001</span>
-            <div class="project-desc">
-              <span>
-                <p class="desc-heading">Name</p>
-                <p class="desc-desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Tenetur velit est odio porro sint sapiente qui distinctio
-                  fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi,
-                  quae, provident maxime dolores aspernatur?
-                </p>
-                <span class="bottom-desc">
-                  <span class="tag-wrapper">
-                    <p class="tag">html</p>
-                    <p class="tag">html</p>
-                  </span>
-                  <a href="" class="link">Visit site</a>
-                </span>
-              </span>
-              <div>
-                <img
-                  src="./images/bridget-photo.jpg"
-                  alt="Project Screenshot"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-          <span class="border-bottom"></span>
-          <div class="project-card">
-            <span class="desc-heading">001</span>
-            <div class="project-desc">
-              <span>
-                <p class="desc-heading">Name</p>
-                <p class="desc-desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Tenetur velit est odio porro sint sapiente qui distinctio
-                  fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi,
-                  quae, provident maxime dolores aspernatur?
-                </p>
-                <span class="bottom-desc">
-                  <span class="tag-wrapper">
-                    <p class="tag">html</p>
-                    <p class="tag">html</p>
-                  </span>
-                  <a href="">Visit site</a>
-                </span>
-              </span>
-              <div>
-                <img
-                  src="./images/bridget-photo.jpg"
-                  alt="Project Screenshot"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-          <span class="border-bottom"></span>
-          <div class="project-card">
-            <span class="desc-heading">001</span>
-            <div class="project-desc">
-              <span>
-                <p class="desc-heading">Name</p>
-                <p class="desc-desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Tenetur velit est odio porro sint sapiente qui distinctio
-                  fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi,
-                  quae, provident maxime dolores aspernatur?
-                </p>
-                <span class="bottom-desc">
-                  <span class="tag-wrapper">
-                    <p class="tag">html</p>
-                    <p class="tag">html</p>
-                  </span>
-                  <a href="">Visit site</a>
-                </span>
-              </span>
-              <div>
-                <img
-                  src="./images/bridget-photo.jpg"
-                  alt="Project Screenshot"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-          <span class="border-bottom"></span>
-          <div class="project-card">
-            <span class="desc-heading">001</span>
-            <div class="project-desc">
-              <span>
-                <p class="desc-heading">Name</p>
-                <p class="desc-desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Tenetur velit est odio porro sint sapiente qui distinctio
-                  fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi,
-                  quae, provident maxime dolores aspernatur?
-                </p>
-                <span class="bottom-desc">
-                  <span class="tag-wrapper">
-                    <p class="tag">html</p>
-                    <p class="tag">html</p>
-                  </span>
-                  <a href="">Visit site</a>
-                </span>
-              </span>
-              <div>
-                <img
-                  src="./images/bridget-photo.jpg"
-                  alt="Project Screenshot"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-          <span class="border-bottom"></span>
-          <div class="project-card">
-            <span class="desc-heading">001</span>
-            <div class="project-desc">
-              <span>
-                <p class="desc-heading">Name</p>
-                <p class="desc-desc">
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Tenetur velit est odio porro sint sapiente qui distinctio
-                  fugiat maiores quaerat incidunt corporis ipsum nesciunt quasi,
-                  quae, provident maxime dolores aspernatur?
-                </p>
-                <span class="bottom-desc">
-                  <span class="tag-wrapper">
-                    <p class="tag">html</p>
-                    <p class="tag">html</p>
-                  </span>
-                  <a href="">Visit site</a>
-                </span>
-              </span>
-              <div>
-                <img
-                  src="./images/bridget-photo.jpg"
-                  alt="Project Screenshot"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-          <span class="border-bottom"></span>
-        </div>
-      </section>
     </main>
 
     <footer>
@@ -324,9 +272,7 @@
           <li class="social links">LinkedIn</li>
           <li class="social links">Github</li>
         </ul>
-        <div>
-          <p>Developed by yours truly</p>
-        </div>
+        <p>Developed by yours truly</p>
       </div>
     </footer>
 
