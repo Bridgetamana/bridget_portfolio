@@ -5,6 +5,7 @@ const savedTheme = localStorage.getItem('theme');
 if (savedTheme) {
   body.classList.toggle('dark-mode', savedTheme === 'dark');
 }
+
 circle.addEventListener('click', function() {
   const isDarkMode = body.classList.toggle('dark-mode');
   
