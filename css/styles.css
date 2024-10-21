@@ -25,16 +25,6 @@ select {
   font: inherit;
 }
 
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  overflow-wrap: break-word;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -59,7 +49,7 @@ button {
   --dark-bg-color: #141414;
   --dark-text-color: #dfd3c3;
   --tool-bg-color: rgba(194, 194, 194, 0.4);
-  --dark-tool-bg-color:  rgba(0, 0, 0, 0.4);
+  --dark-tool-bg-color: rgba(0, 0, 0, 0.4);
 }
 
 .dark-mode {
@@ -72,7 +62,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
   background-color: var(--light-bg-color);
   color: var(--light-text-color);
   transition: background 0.3s ease-out, color 0.3s ease-out;
@@ -97,7 +87,10 @@ main {
   margin: 0 auto;
 }
 
-#hero, #skills, #projects {
+#hero,
+#skills,
+#projects,
+#what-i-offer {
   padding: 2rem 2.5vw;
 }
 
@@ -109,12 +102,13 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2.5rem 3vw;
+  font-size: 0.75rem;
 }
 
 nav > ul {
   display: flex;
   justify-content: flex-end;
-  gap: 12px;
+  gap: 8px;
   align-items: center;
 }
 
@@ -162,7 +156,7 @@ nav > ul {
 }
 
 .hero-text {
-  font-size: 9vw;
+  font-size: 10.5vw;
   display: flex;
   font-family: "Stylish", serif;
   font-weight: bold;
@@ -232,6 +226,10 @@ nav > ul {
   transition: all 0.2s ease-in-out;
 }
 
+.bio-link {
+  border-bottom: 2px solid red;
+}
+
 .circled-text {
   position: relative;
   display: inline-block;
@@ -281,6 +279,7 @@ nav > ul {
   transition: all 0.3s ease;
   transform: rotate(-3deg);
   margin-top: 1rem;
+  font-size: 12px;
 }
 
 .polaroid:hover {
@@ -325,7 +324,7 @@ nav > ul {
 h2 {
   text-transform: uppercase;
   font-family: "Stylish", serif;
-  font-size: 1rem;
+  font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 6px;
   transition: font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
@@ -333,7 +332,7 @@ h2 {
 
 .skills {
   padding: 0.5rem 0;
-  font-size: 2rem;
+  font-size: 1.75rem;
   position: relative;
 }
 
@@ -529,10 +528,6 @@ h2 {
   top: 0;
 }
 
-#what-i-offer {
-  padding: 2rem;
-}
-
 .offer-container {
   display: flex;
   flex-wrap: wrap;
@@ -549,19 +544,19 @@ h2 {
   box-sizing: border-box;
   height: 300px;
   margin: 0;
-  border: 1px solid rgba(0, 123, 255, 0.7);
+  border: 1px solid #007bff;
 }
 
 .offer-card:hover {
-  background-color: rgba(0, 123, 255, 0.7); }
+  background-color: #007bff;
+}
 
 .offer-card:not(:hover) {
   transition: background-color 0.3s ease;
 }
 
 .offer-card p {
-  word-wrap: none;
-  height: 84px;
+  height: 96px;
   margin: 0;
   padding: 0.25rem;
 }
@@ -591,13 +586,13 @@ footer {
 .cta-container h2 {
   font-size: 24px;
   margin-bottom: 10px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .cta-container p {
   font-size: 16px;
   margin-bottom: 28px;
-  font-family: 'Kalam', cursive;
+  font-family: "Kalam", cursive;
 }
 
 .cta-button {
@@ -630,11 +625,11 @@ footer {
   transition: opacity 0.3s ease;
 }
 
-.socials:hover li  {
+.socials:hover li {
   opacity: 0.5;
 }
 
-.socials li:hover  {
+.socials li:hover {
   opacity: 1;
 }
 
@@ -660,21 +655,6 @@ footer {
 }
 
 @media (min-width: 600px) {
-  .bio {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .bio-text {
-    width: 60%;
-  }
-
-  .polaroid {
-    max-width: 250px;
-    margin-top: 0;
-  }
-
   .single-project {
     margin: 30px 0;
   }
@@ -694,24 +674,16 @@ footer {
     grid-column: 6 / 13;
   }
 
-  .footer-bottom {
-    display: flex;
-  }
-
-  .socials {
-    justify-content: flex-start;
-  }
-
-  .attribute {
-    text-align: right;
-  }
-
   .skills {
     font-size: 3.5vw;
   }
 
   .offer-card {
     flex-basis: 50%;
+  }
+
+  .hero-text {
+    font-size: 9vw;
   }
 }
 
@@ -722,6 +694,21 @@ footer {
 
   nav > ul {
     gap: 18px;
+  }
+
+  .bio {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .bio-text {
+    width: 60%;
+  }
+
+  .polaroid {
+    max-width: 250px;
+    margin-top: 0;
   }
 
   .socials {
@@ -743,12 +730,20 @@ footer {
     font-size: 0.85rem;
   }
 
-  h2 {
-    font-size: 1.25rem;
-  }
-
   .offer-card {
     flex-basis: 25%;
+  }
+
+  .footer-bottom {
+    display: flex;
+  }
+
+  .socials {
+    justify-content: flex-start;
+  }
+
+  .attribute {
+    text-align: right;
   }
 }
 
