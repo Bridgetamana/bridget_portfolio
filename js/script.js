@@ -4,6 +4,11 @@ const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme) {
   body.classList.toggle('dark-mode', savedTheme === 'dark');
+  if (savedTheme === 'dark') {
+    circle.style.transform = 'rotate(180deg)';
+  } else {
+    circle.style.transform = 'rotate(0)';
+  }
 }
 
 circle.addEventListener('click', function () {
@@ -14,7 +19,7 @@ circle.addEventListener('click', function () {
   if (isDarkMode) {
     circle.style.transform = 'rotate(180deg)';
   } else {
-    circle.style.transform = 'rotate(0)'
+    circle.style.transform = 'rotate(0)';
   }
 });
 document.addEventListener("DOMContentLoaded", function () {

@@ -14,9 +14,6 @@
 }
 
 .project-intro {
-  display: grid;
-  align-items: center;
-  column-gap: 20px;
   margin: 3rem 0;
 }
 
@@ -61,7 +58,7 @@
   margin: 0 auto;
   padding-top: 3rem;
   width: 100%;
-  font-size: 18px;
+  font-size: 14px;
 }
 
 .nav-btn a {
@@ -71,25 +68,25 @@
 }
 
 .nav-arrow {
-  height: 24px;
-  width: 24px;
+  height: 18px;
+  width: 18px;
   display: flex;
 }
 
 
 @media (min-width: 600px) {
+
+  .project-intro {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 32px;
+  }
+
   #project-description {
     grid-column: 1 / 9;
   }
   .more-info {
     grid-column: 10 / 13;
-  }
-  .prev-arrow {
-    left: 30px;
-  }
-
-  .next-arrow {
-    right: 30px;
   }
 }
 
