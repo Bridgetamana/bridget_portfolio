@@ -715,11 +715,6 @@ footer {
     gap: 4px;
   }
 
-  .service-box-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-  }
-
   body {
     font-size: 0.85rem;
   }
