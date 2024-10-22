@@ -4,7 +4,7 @@ const projects = [
     title: "Project One",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, aut aliquid temporibus laboriosam vel mollitia, ex tenetur neque omnis explicabo quia. Consectetur labore sit incidunt, qui nulla magni vitae illo!",
     tools: ["HTML", "CSS", "JavaScript"],
-    image: "images/bridget-photo.jpg",
+    image: "images/bridget-photo.webp",
     demoLink: "https://example.com",
     repoLink: ""
   },
@@ -13,7 +13,7 @@ const projects = [
     title: "Project Two",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, aut aliquid temporibus laboriosam vel mollitia, ex tenetur neque omnis explicabo quia. Consectetur labore sit incidunt, qui nulla magni vitae illo!",
     tools: ["React", "Node.js", "Express"],
-    image: "images/bridget-photo.jpg",
+    image: "images/bridget-photo.webp",
     demoLink: "https://example.com",
     repoLink: ""
   },
@@ -23,7 +23,7 @@ const projects = [
     title: "Project Three",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, aut aliquid temporibus laboriosam vel mollitia, ex tenetur neque omnis explicabo quia. Consectetur labore sit incidunt, qui nulla magni vitae illo!",
     tools: ["React", "Node.js", "Express"],
-    image: "images/bridget-photo.jpg",
+    image: "images/bridget-photo.webp",
     demoLink: "https://example.com",
     repoLink: ""
   },
@@ -33,7 +33,7 @@ const projects = [
     title: "Project Four",
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, aut aliquid temporibus laboriosam vel mollitia, ex tenetur neque omnis explicabo quia. Consectetur labore sit incidunt, qui nulla magni vitae illo!",
     tools: ["React", "Node.js", "Express"],
-    image: "images/bridget-photo.jpg",
+    image: "images/bridget-photo.webp",
     demoLink: "https://example.com",
     repoLink: ""
   },
