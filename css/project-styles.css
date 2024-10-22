@@ -1,5 +1,4 @@
-.project-details {
-  width: 85%;
+.project-details, .go-back-button {
   max-width: 70rem;
   margin: 3rem auto;
   padding: 2rem 2.5vw;
@@ -31,7 +30,7 @@
 
 #project-image {
   width: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 9rem;
 }
 
 .tools,
@@ -58,34 +57,25 @@
 
 .nav-btn {
   display: flex;
+  justify-content: space-between;
   margin: 0 auto;
-  width: 24rem;
+  padding-top: 3rem;
+  width: 100%;
+  font-size: 18px;
+}
+
+.nav-btn a {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .nav-arrow {
-  font-size: 1rem;
-  background: #000;
-  cursor: pointer;
-  display: inline-block;
-  padding: 12px 15px;
-  border-radius: 99px;
-  line-height: 1;
-  margin: 0 5px 10px;
-  backdrop-filter: blur(10px);
-  background-color: var(--tool-bg-color);
+  height: 24px;
+  width: 24px;
+  display: flex;
 }
 
-.go-back-button {
-  padding: 0 3vw;
-}
-
-.prev-arrow {
-  left: 10px;
-}
-
-.next-arrow {
-  right: 10px;
-}
 
 @media (min-width: 600px) {
   #project-description {
@@ -123,8 +113,3 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .project-details {
-    width: 95%;
-  }
-}
