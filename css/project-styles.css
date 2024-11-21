@@ -1,3 +1,18 @@
+:root {
+  --light-bg-color: #ddd;
+  --light-text-color: #1d1d1d;
+  --dark-bg-color: #141414;
+  --dark-text-color: #dfd3c3;
+  --tool-bg-color: rgba(194, 194, 194, 0.4);
+  --dark-tool-bg-color: rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode {
+  --light-bg-color: var(--dark-bg-color);
+  --light-text-color: var(--dark-text-color);
+  --tool-bg-color: var(--dark-tool-bg-color);
+}
+
 .project-details, .go-back-button {
   max-width: 70rem;
   margin: 3rem auto;
@@ -45,11 +60,31 @@
   font-size: 16px;
 }
 
+#project-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8;
+}
+
+#project-tools > li {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  border-radius: 100px;
+  border: 1px solid var(--light-text-color);
+  display: inline-block;
+  color: var(--light-text-color);
+  text-align: center;
+  margin: 0.35rem;
+}
+
 #project-description {
   font-size: 17px;
   line-height: 1.8;
   grid-column: 1 / 13;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .nav-btn {
@@ -71,6 +106,31 @@
   height: 18px;
   width: 18px;
   display: flex;
+}
+
+.website-link {
+  margin-top: 1rem;
+  margin-bottom: 50px;
+}
+
+.website-link > a {
+  width: 100%;
+  max-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  border-radius: 99px;
+  line-height: 1;
+  margin: 0 5px 10px;
+  background-color: var(--tool-bg-color);
+}
+
+.website-link > a:hover {
+  background-color: var(--light-text-color);
+  color: var(--light-bg-color);
 }
 
 
