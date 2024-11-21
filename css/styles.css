@@ -2,9 +2,6 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   margin: 0;
   padding: 0;
 }
@@ -78,7 +75,44 @@ body:before {
   z-index: -1000;
 }
 
-main {
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light-bg-color);
+  justify-content: center;
+  flex-direction: column;
+  z-index: 1000;
+}
+
+.progress-container {
+  width: 80%;
+  max-width: 300px;
+  height: 4px;
+  background-color: var(
+    --light-bg-color
+  );
+  border-radius: 2px; 
+  margin: 10px 0; 
+}
+
+.progress-bar {
+  height: 100%; 
+  width: 0;
+  background-color: var(--light-text-color); 
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  margin-top: 5px;
+  font-size: 1.2rem;
+  color: var(--light-text-color); 
+}
+
+
+main, header, footer {
   width: 95%;
   max-width: 70rem;
   margin: 0 auto;
@@ -91,27 +125,30 @@ main {
   padding: 2rem 2.5vw;
 }
 
-header {
-  width: 95%;
-  max-width: 70rem;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
+header, nav > ul, .nav-links, .dark-mode-toggle, .hero-container, .polaroid-name, .polaroid-details, #loader {
   align-items: center;
+  display: flex;
+}
+
+.nav > ul, .polaroid-name, .polaroid-details {
+  gap: 8;
+} 
+
+header {
+  justify-content: space-between;
   padding: 2.5rem 3vw;
   font-size: 0.75rem;
 }
 
-nav > ul {
-  display: flex;
+nav > ul, .offer-card {
   justify-content: flex-end;
-  gap: 8px;
-  align-items: center;
 }
 
+.nav-links li, h2, .socials li, .project-title, .hero-text, .frontend-pill{
+  text-transform: uppercase;
+} 
+
 .nav-links {
-  display: flex;
-  align-items: center;
   height: 32px;
   transition: color 0.3s ease;
 }
@@ -119,7 +156,6 @@ nav > ul {
 .nav-links li {
   transition: opacity 0.3s ease;
   letter-spacing: 2px;
-  text-transform: uppercase;
   padding: 3px 2px;
 }
 
@@ -132,9 +168,7 @@ nav > ul {
 }
 
 .hero-container {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-family: "Stylish", serif;
   margin-top: 50px;
@@ -149,7 +183,6 @@ nav > ul {
   padding: 5px 15px;
   border-radius: 50px;
   font-size: 0.875rem;
-  text-transform: uppercase;
 }
 
 .hero-text {
@@ -158,8 +191,6 @@ nav > ul {
   font-family: "Stylish", serif;
   font-weight: bold;
   letter-spacing: 8px;
-  display: flex;
-  text-transform: uppercase;
   justify-content: center;
 }
 
@@ -301,25 +332,14 @@ nav > ul {
 }
 
 .polaroid-name {
-  display: flex;
-  align-items: center;
-  gap: 8px;
   margin-bottom: 9px;
 }
 
-.polaroid-details {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
 .name {
-  font-size: 1rem;
   font-weight: 600;
 }
 
 h2 {
-  text-transform: uppercase;
   font-family: "Stylish", serif;
   font-size: 1.25rem;
   font-weight: 700;
@@ -406,13 +426,11 @@ h2 {
 
 .project-title {
   font-size: 20px;
-  text-transform: uppercase;
 }
 
 .project-desc {
   margin-top: 10px;
   opacity: 0.7;
-  font-size: 1rem;
 }
 
 .circle {
@@ -446,9 +464,7 @@ h2 {
   padding: 0;
   cursor: pointer;
   z-index: 40;
-  display: flex;
   justify-content: center;
-  align-items: center;
   width: 25px;
   height: 25px;
 }
@@ -484,7 +500,6 @@ h2 {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
   padding: 1rem;
   box-sizing: border-box;
   height: 300px;
@@ -522,8 +537,6 @@ h2 {
 }
 
 footer {
-  width: 95%;
-  max-width: 70rem;
   margin: 4rem auto;
 }
 
@@ -575,7 +588,6 @@ footer {
 
 .socials li {
   letter-spacing: 2px;
-  text-transform: uppercase;
   cursor: pointer;
   padding: 0 2px;
   transition: opacity 0.3s ease;
@@ -602,44 +614,6 @@ footer {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   column-gap: 28px;
-}
-
-#loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: var(--light-bg-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  z-index: 1000;
-}
-
-.progress-container {
-  width: 80%;
-  max-width: 300px;
-  height: 4px;
-  background-color: var(
-    --light-bg-color
-  );
-  border-radius: 2px; 
-  margin: 10px 0; 
-}
-
-.progress-bar {
-  height: 100%; 
-  width: 0;
-  background-color: var(--light-text-color); 
-  transition: width 0.4s ease;
-}
-
-.progress-label {
-  margin-top: 5px;
-  font-size: 1.2rem;
-  color: var(--light-text-color); 
 }
 
 @media (min-width: 500px) {
