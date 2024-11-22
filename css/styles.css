@@ -294,6 +294,29 @@ nav > ul, .offer-card {
   background-size: 40px 10px;
 }
 
+.cv-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 50px;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.cv-button:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cv-button i {
+  font-size: 1.1em;
+}
+
 .polaroid {
   position: relative;
   background-color: #f0f0f0;
@@ -304,14 +327,15 @@ nav > ul, .offer-card {
   text-align: center;
   margin: 0 auto;
   max-width: 200px;
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform: rotate(-3deg);
   margin-top: 1rem;
   font-size: 12px;
 }
 
 .polaroid:hover {
-  transform: rotate(0deg) scale(1.05);
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.3);
 }
 
 .polaroid img {
@@ -467,6 +491,32 @@ h2 {
   justify-content: center;
   width: 25px;
   height: 25px;
+  transition: transform 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  transform: scale(1.1) rotate(180deg);
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(to right, #007bff, #7e78d2);
+  z-index: 1000;
+  transition: width 0.2s ease;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .circle:hover {
