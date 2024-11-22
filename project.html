@@ -27,15 +27,15 @@
     </header>
 
     <main>
-      <a href="/" class="go-back-button">Back to Portfolio</a>
-      <section class="project-details" id="project-details">
+      <!-- <a href="/" class="go-back-button">Back to Portfolio</a> -->
+      <section class="project-details-container" id="project-details">
         <h1 id="project-title"></h1>
         <div class="project-intro">
           <div>
-            <h3 class="tools">Project description:</h3>
+            <h2 class="tools">Project description:</h2>
             <p id="project-description"></p>
             <div class="website-link">
-              <a id="project-repo" href="#" target="_blank">
+              <a id="project-demo" href="#" target="_blank">
                 Visit Website
                 <span class="nav-arrow"
                   ><svg
@@ -55,30 +55,41 @@
               </a>
             </div>
           </div>
-          <div class="more-info">
-            <div>
-              <h3 class="tools">Technology</h3>
+        </div>
+        <div>
+          <div class="features">
+            <div class="more-info">
+              <h2 class="tools">Technology</h2>
               <ul id="project-tools"></ul>
+              <div>
+                <a id="project-repo" href="#" target="_blank"></a>
+              </div>
             </div>
-            <div>
-              <h3 class="links">Links:</h3>
-              <ul class="link-wrapper">
-                <li>
-                  <a id="project-demo" href="#" target="_blank">Website</a>
-                </li>
-                <li>
-                  <a id="project-repo" href="#" target="_blank"
-                    >View on GitHub</a
-                  >
-                </li>
-              </ul>
+            <div class="more-info">
+              <h2 class="tools">Features</h2>
+              <ul id="project-features"></ul>
             </div>
           </div>
+          <div>
+            <h2 class="tools">Challenges</h2>
+            <p id="project-challenges"></p>
+          </div>
         </div>
-        <img id="project-image" src="" alt="Project Screenshot" loading="lazy"/>
+        <div>
+          <img
+            id="project-image"
+            src=""
+            alt="Project Screenshot"
+            loading="lazy"
+          />
+        </div>
+        <div class="more-img">
+          <img src="" alt="">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
         <div class="nav-btn">
-          <a id="prev-project"
-            >
+          <a id="prev-project">
             <span class="nav-arrow"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -94,10 +105,10 @@
                 />
               </svg>
             </span>
-            Previous project
+            Previous
           </a>
           <a id="next-project"
-            >Next Project
+            >Next
             <span class="nav-arrow"
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -116,7 +127,6 @@
           </a>
         </div>
       </section>
-
     </main>
 
     <footer>

@@ -54,14 +54,26 @@ const currentProject = projects.find(project => project.id === projectId);
 if (currentProject) {
   document.getElementById("project-title").textContent = currentProject.title;
   document.getElementById("project-description").textContent = currentProject.description;
+  document.getElementById("project-challenges").textContent = currentProject.challenges;
 
   const toolsList = document.getElementById("project-tools");
   toolsList.innerHTML = '';
+  const featuresList = document.getElementById("project-features");
+  featuresList.innerHTML = '';
+  
   currentProject.tools.forEach(tool => {
     const li = document.createElement("li");
     li.textContent = tool;
     toolsList.appendChild(li);
   });
+  
+  if (currentProject.features) {
+    currentProject.features.forEach(feature => {
+      const li = document.createElement("li");
+      li.textContent = feature;
+      featuresList.appendChild(li);
+    });
+  }
 
   document.getElementById("project-image").src = currentProject.image;
   document.getElementById("project-image").alt = currentProject.title;
