@@ -4,19 +4,6 @@ var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click
 var audio2 = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3');
 const savedTheme = localStorage.getItem('theme');
 
-function reveal() {
-  const reveals = document.querySelectorAll('.reveal');
-  reveals.forEach(element => {
-    const windowHeight = window.innerHeight;
-    const elementTop = element.getBoundingClientRect().top;
-    const elementVisible = 150;
-    
-    if (elementTop < windowHeight - elementVisible) {
-      element.classList.add('active');
-    }
-  });
-}
-
 if (savedTheme) {
   body.classList.toggle('dark-mode', savedTheme === 'dark');
   if (savedTheme === 'dark') {
@@ -65,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         document.getElementById("loader").style.display = "none";
         document.getElementById("main-content").style.display = "block";
-      }, 500); 
+      }, 300); 
       clearInterval(progressInterval);
     }
   }
