@@ -60,14 +60,6 @@
   </head>
 
   <body>
-    
-    <div id="loader">
-      <div class="progress-container">
-        <div class="progress-bar" id="progress-bar"></div>
-      </div>
-      <div class="progress-label" id="progress-label">0%</div>
-    </div>
-
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
       <a href="/">B / A</a>
@@ -99,24 +91,44 @@
         <div class="bio">
           <div class="bio-text">
             <p>
-              <span class="greeting">Hello</span>, I'm a
-              <span class="zigzag-underline">front-end developer</span> who thrives on turning complex ideas into simple, functional, and visually appealing websites. I enjoy building solutions that not only work seamlessly but also leave a lasting impression on users.
+              <span class="greeting">Hello</span>, I’m Bridget—a front-end
+              developer passionate about building web experiences that are both
+              intuitive and inclusive. Working with talented developers has
+              taught me the value of clean, maintainable code and the impact
+              thoughtful development can have on users.
             </p>
-            <br />
-            <p>I’ve had the privilege of working with a variety of teams on projects, especially for coding challenges and hackathons using React and NextJs. In every collaboration, I prioritize clear communication, efficient workflows, and the end-user experience.</p>
             <br />
             <p>
-              Beyond coding, I enjoy sharing my journey on platforms like 
-              <a href="https://dev.to/bridget_amana" class="bio-link" target="_blank" 
-                rel="noopener noreferrer">Dev.to</a>, also love creating fun, time-saving pens on 
-              <a href="https://codepen.io/Bridgetamana" class="bio-link" target="_blank" 
-                rel="noopener noreferrer">CodePen</a> and How could I forget, I love <span class="quirky">word games</span>!
+              From coding challenges to hackathons, I’ve worked with teams using
+              tools like React and Next.js, where I focus on clear
+              communication, efficient workflows, and creating seamless user
+              experiences. Each project, no matter the size, is an opportunity
+              to learn, grow, and deliver value.
             </p>
-            
-            <a href="https://drive.google.com/file/d/1A3D-mZbcHzMtwSbBAO99-iIUAoG3ClbG/view?usp=sharing" class="cv-button">
-              <span>Download CV</span>
-              <i class="fa-solid fa-download"></i>
-            </a>
+            <br />
+            <p>
+              I share my learning journey on
+              <a
+                href="https://dev.to/bridget_amana"
+                class="bio-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Dev.to</a
+              >
+              and enjoy experimenting with quick, useful projects on
+              <a
+                href="https://codepen.io/Bridgetamana"
+                class="bio-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >CodePen</a
+              >
+              and How could I forget, I love love word games!
+            </p>
+
+            <div class="cv-section">
+              <a href="#" class="cv-link">Download CV</a>
+            </div>
           </div>
           <div class="polaroid">
             <img
@@ -142,31 +154,6 @@
         </div>
       </section>
 
-      <!-- Service Section -->
-      <section id="what-i-offer">
-        <h2>How I Can Help</h2>
-        <div class="offer-container">
-          <div class="offer-card">
-            <h3>Responsive Web Design</h3>
-            <p>
-              I create websites that are not only visually appealing but also accessible and fully responsive.
-            </p>
-          </div>
-          <div class="offer-card">
-            <h3>Performance Optimization</h3>
-            <p>
-              I optimize websites for speed and efficiency, creating fast-loading experiences for all users.
-            </p>
-          </div>
-          <div class="offer-card">
-            <h3>Collaborative Development</h3>
-            <p>
-              I thrive in team settings, bringing strong communication skills to projects 
-            </p>
-          </div>
-        </div>
-      </section>
-
       <!-- Skills Section -->
       <section id="skills">
         <h2>Skills .</h2>
@@ -178,102 +165,83 @@
           <li class="skills">SASS<span class="border-bottom"></span></li>
           <li class="skills">React<span class="border-bottom"></span></li>
           <li class="skills">NextJs<span class="border-bottom"></span></li>
-          <li class="skills">Agile Methodologies<span class="border-bottom"></span></li>
+          <li class="skills">
+            Agile Methodologies<span class="border-bottom"></span>
+          </li>
         </ul>
       </section>
 
       <!-- Projects Section -->
       <section id="projects">
-        <h2>Projects .</h2>
-        <div class="container">
-          <a href="project.html?id=1" class="single-project">
-            <div class="project-img">
-              <ul class="project-tools">
-                <li>React + Vite </li>
-                <li>TailwindCSS</li>
-              </ul>
+        <h2>Stuff I Did .</h2>
+        <div class="project-layout">
+          <a href="project.html?id=1" class="project-clipping" style="--rotation: -3deg">
+            <div class="project-image">
               <img
                 src="./images/EventCentral-screenshot.png"
-                alt="Project 1"
+                alt="EventHub Project"
                 loading="lazy"
-                width="300"
-                height="200"
               />
             </div>
-            <div class="project-info">
-              <p class="project-title">EventHub</p>
-              <!-- <p class="project-desc">
-                EventHub is a comprehensive event management and ticketing platform designed to simplify the process of creating, managing, and promoting events.
-              </p> -->
+            <div class="project-details">
+              <h3 class="project-title">EventHub</h3>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Vite</span>
+                <span class="project-tag">TailwindCSS</span>
+              </div>
             </div>
           </a>
 
-          <!-- Second Project -->
-          <a href="project.html?id=2" class="single-project">
-            <div class="project-img">
-              <ul class="project-tools">
-                <li>React</li>
-                <li>CSS</li>
-              </ul>
+          <a href="project.html?id=2" class="project-clipping" style="--rotation: 2deg">
+            <div class="project-image">
               <img
-                src="./images/bridget-photo.webp"
-                alt="Project 2"
+                src="./images/academia-screenshot2.png"
+                alt="Academia LMS Project"
                 loading="lazy"
-                width="300"
-                height="200"
               />
             </div>
-            <div class="project-info">
-              <p class="project-title">Academia LMS</p>
-              <!-- <p class="project-desc">
-                This LMS focuses on creating an efficient and engaging learning environment with real-time features and intuitive task management. 
-              </p> -->
+            <div class="project-details">
+              <h3 class="project-title">Academia LMS</h3>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">CSS</span>
+              </div>
             </div>
           </a>
 
-          <!-- Third Project -->
-          <a href="project.html?id=3" class="single-project">
-            <div class="project-img">
-              <ul class="project-tools">
-                <li>JavaScript</li>
-                <li>CSS</li>
-              </ul>
+          <a href="project.html?id=3" class="project-clipping" style="--rotation: -3deg">
+            <div class="project-image">
               <img
                 src="images/wordunscrambler-screenshot.png"
-                alt="Project 2"
+                alt="Word Unscrambler Project"
                 loading="lazy"
-                width="300"
-                height="200"
               />
             </div>
-            <div class="project-info">
-              <p class="project-title">Word Unscrambler</p>
-              <!-- <p class="project-desc">
-                The Word Unscrambler is a web application that allows users to input a scrambled word and see all valid English word combinations that can be formed from the given letters.
-              </p> -->
+            <div class="project-details">
+              <h3 class="project-title">Word Unscrambler</h3>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">CSS</span>
+              </div>
             </div>
           </a>
 
-          <!-- Fourth Project -->
-          <a href="project.html?id=4" class="single-project">
-            <div class="project-img">
-              <ul class="project-tools">
-                <li>TypeScript</li>
-                <li>React</li>
-              </ul>
+          <a href="project.html?id=4" class="project-clipping" style="--rotation: 2deg">
+            <div class="project-image">
               <img
                 src="./images/onlinestore-screenshot (2).png"
-                alt="Project 2"
+                alt="Online Store Project"
                 loading="lazy"
-                width="300"
-                height="200"
               />
             </div>
-            <div class="project-info">
-              <p class="project-title">Timbu online store</p>
-              <!-- <p class="project-desc">
-                Timbu Store is a mini e-commerce platform that leverages the Timbu API to provide users with a seamless online shopping experience. This project demonstrates the implementation of core e-commerce functionalities while focusing on type safety and responsive design. 
-              </p> -->
+            <div class="project-details">
+              <h3 class="project-title">Timbu online store</h3>
+              <div class="project-tags">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Typescript</span>
+              </div>
             </div>
           </a>
         </div>

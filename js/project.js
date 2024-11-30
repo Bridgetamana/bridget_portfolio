@@ -14,11 +14,11 @@ const projects = [
   {
     id: 2,
     title: "Academia LMS",
-    description: "A comprehensive learning platform developed during an intensive 4-day hackathon, designed to bridge the gap between educators and students. This LMS focuses on creating an efficient and engaging learning environment with real-time features and intuitive task management.",
+    description: "A comprehensive learning platform developed during an intensive 4-day hackathon, designed to bridge the gap between educators and students. This LMS focuses on creating an efficient and engaging learning environment with real-time features and intuitive task management. It's still UNDER CONSTRUCTION",
     challenges: "Developing an LMS during a 4-day hackathon was an exhilarating yet challenging experience. My teammate and I pushed ourselves to turn our idea into reality under intense time pressure. One of the toughest parts was figuring out which features to prioritize. We had so many ideas for what this platform could be, but with just four days, we had to make some tough calls and focus on the core functionalities that would deliver the most value. Despite the challenges, we delivered a functional LMS that we were proud of. There is still room for improvements, and I’m excited about the potential of expanding what we started!",
     tools: ["Next.js", "TailwindCSS", "Daisy UI", "Zustand"],
     features: ["Announcements board", "Deadline reminders", "Document sharing"],
-    image: "images/bridget-photo.webp",
+    image: "./images/academia-screenshot1.png",
     demoLink: "",
     repoLink: ""
   },
