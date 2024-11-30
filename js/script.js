@@ -34,3 +34,58 @@ circle.addEventListener('click', function () {
 if (savedTheme === 'dark') {
   body.classList.add('dark-mode');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const skillSection = document.getElementById('skills');
+  const skillItems = document.querySelectorAll('.skill-container .skills');
+  const observerOptions = {
+    root: null, 
+    rootMargin: '0px',
+    threshold: 0.1 
+  };
+
+  const revealSkills = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        skillItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('skill-reveal');
+          }, index * 400); 
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const skillObserver = new IntersectionObserver(revealSkills, observerOptions);
+
+  skillObserver.observe(skillSection);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const projectSection = document.getElementById('projects');
+  const projectItems = document.querySelectorAll('.project-clipping');
+
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const revealProjects = (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        projectItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add('project-reveal');
+          }, index * 400);
+        });
+        observer.unobserve(entry.target);
+      }
+    });
+  };
+
+  const projectObserver = new IntersectionObserver(revealProjects, observerOptions);
+
+  projectObserver.observe(projectSection);
+});
