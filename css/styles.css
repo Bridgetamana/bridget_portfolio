@@ -380,6 +380,10 @@ h2,
   transition: filter 0.3s ease;
 }
 
+.polaroid-details {
+  text-decoration: none;
+}
+
 .polaroid:hover img {
   filter: grayscale(0%) sepia(0%);
 }
