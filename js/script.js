@@ -89,3 +89,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
   projectObserver.observe(projectSection);
 });
+
+const customCursor = document.createElement('div');
+customCursor.id = 'custom-cursor';
+customCursor.textContent = 'View';
+document.body.appendChild(customCursor);
+
+let mouseX = 0, mouseY = 0;  
+let cursorX = 0, cursorY = 0;
+const delay = 0.15; 
+
+document.addEventListener('mousemove', (e) => {
+  mouseX = e.clientX;
+  mouseY = e.clientY;
+});
+
+function animateCursor() {
+  cursorX += (mouseX - cursorX) * delay;
+  cursorY += (mouseY - cursorY) * delay;
+
+  customCursor.style.left = `${cursorX}px`;
+  customCursor.style.top = `${cursorY}px`;
+
+  requestAnimationFrame(animateCursor);
+}
+
+animateCursor();
+const projectLinks = document.querySelectorAll('.project-clipping');
+
+projectLinks.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    customCursor.style.opacity = '1';
+    customCursor.style.transform = 'translate(-50%, -50%) scale(1)';
+  });
+
+  link.addEventListener('mouseleave', () => {
+    customCursor.style.opacity = '0';
+    customCursor.style.transform = 'translate(-50%, -50%) scale(0)';
+  });
+});
