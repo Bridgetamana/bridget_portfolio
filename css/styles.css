@@ -773,6 +773,12 @@ footer {
   z-index: 1000;
 }
 
+@media (pointer: coarse) {
+  #custom-cursor {
+    display: none; 
+  }
+}
+
 .project-clipping:hover ~ #custom-cursor {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
