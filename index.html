@@ -24,27 +24,55 @@
     />
     <meta property="og:image" content="./images/bridget-photo.webp" />
     <meta property="og:type" content="website" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      name="twitter:title"
-      content="Bridget Amana | Frontend Developer Portfolio"
-    />
-    <meta
-      name="twitter:description"
-      content="Explore my portfolio, showcasing my skills and projects as a frontend developer."
-    />
-    <meta name="twitter:image" content="./images/bridget-photo.webp" />
-    <link
-      rel="shortcut icon"
-      href="./images/favicon-32x32.png"
-      type="image/x-icon"
-    />
     <script
       src="https://kit.fontawesome.com/e1c45fbebb.js"
       crossorigin="anonymous"
       defer
     ></script>
     <link rel="stylesheet" href="./css/styles.css" />
+    <style>
+      @font-face {
+        font-family: "kalambold";
+        src: url("../fonts/Kalam/kalam-bold-webfont.woff2") format("woff2"),
+          url("../fonts/Kalam/kalam-bold-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "kalamlight";
+        src: url("../fonts/Kalam/kalam-light-webfont.woff2") format("woff2"),
+          url("../fonts/Kalam/kalam-light-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "kalamregular";
+        src: url("../fonts/Kalam/kalam-regular-webfont.woff2") format("woff2"),
+          url("../fonts/Kalam/kalam-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "open_sansitalic";
+        src: url("opensans-italic-variablefont_wdthwght-webfont.woff2")
+            format("woff2"),
+          url("opensans-italic-variablefont_wdthwght-webfont.woff")
+            format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+      @font-face {
+        font-family: "open_sansregular";
+        src: url("opensans-variablefont_wdthwght-webfont.woff2") format("woff2"),
+          url("opensans-variablefont_wdthwght-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+      }
+    </style>
   </head>
 
   <body>
@@ -79,7 +107,7 @@
         <div class="bio">
           <div class="bio-text">
             <p>
-              <span class="greeting">Hello</span>, I’m Bridget—a front-end
+              Hello, I’m Bridget a front-end
               developer passionate about building web experiences that are both
               intuitive and inclusive. Working with talented developers has
               taught me the value of clean, maintainable code and the impact
@@ -115,8 +143,13 @@
             </p>
 
             <div class="cv-section">
-              <a href="https://drive.google.com/file/d/1A3D-mZbcHzMtwSbBAO99-iIUAoG3ClbG/view?usp=sharing" class="cv-link" target="_blank"
-              rel="noopener noreferrer">Download CV</a>
+              <a
+                href="https://drive.google.com/file/d/1A3D-mZbcHzMtwSbBAO99-iIUAoG3ClbG/view?usp=sharing"
+                class="cv-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Download CV</a
+              >
             </div>
           </div>
           <div class="polaroid">
@@ -160,7 +193,11 @@
       <section id="projects">
         <h2>Stuff I Built .</h2>
         <div class="project-layout">
-          <a href="project.html?id=1" class="project-clipping" style="--rotation: -3deg">
+          <a
+            href="project.html?id=1"
+            class="project-clipping"
+            style="--rotation: -3deg"
+          >
             <div class="project-image">
               <picture>
                 <source
@@ -184,7 +221,11 @@
             </div>
           </a>
 
-          <a href="project.html?id=2" class="project-clipping" style="--rotation: 2deg">
+          <a
+            href="project.html?id=2"
+            class="project-clipping"
+            style="--rotation: 2deg"
+          >
             <div class="project-image">
               <picture>
                 <source
@@ -207,31 +248,39 @@
             </div>
           </a>
 
-          <a href="project.html?id=3" class="project-clipping" style="--rotation: -3deg">
-          <div class="project-image">
-            <picture>
-              <source
-                srcset="./images/wordunscrambler-screenshot.webp"
-                type="image/webp"
-              />
-              <img
-                src="./images/wordunscrambler-screenshot.png"
-                alt="Word Unscrambler Project"
-                loading="lazy"
-              />
-            </picture>
-          </div>
-          <div class="project-details">
-            <h3 class="project-title">Word Unscrambler</h3>
-            <div class="project-tags">
-              <span class="project-tag">HTML</span>
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">CSS</span>
+          <a
+            href="project.html?id=3"
+            class="project-clipping"
+            style="--rotation: -3deg"
+          >
+            <div class="project-image">
+              <picture>
+                <source
+                  srcset="./images/wordunscrambler-screenshot.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/wordunscrambler-screenshot.png"
+                  alt="Word Unscrambler Project"
+                  loading="lazy"
+                />
+              </picture>
             </div>
-          </div>
-        </a>
+            <div class="project-details">
+              <h3 class="project-title">Word Unscrambler</h3>
+              <div class="project-tags">
+                <span class="project-tag">HTML</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-tag">CSS</span>
+              </div>
+            </div>
+          </a>
 
-          <a href="project.html?id=4" class="project-clipping" style="--rotation: 2deg">
+          <a
+            href="project.html?id=4"
+            class="project-clipping"
+            style="--rotation: 2deg"
+          >
             <div class="project-image">
               <picture>
                 <source
@@ -275,33 +324,33 @@
       <div class="footer-bottom">
         <ul class="socials">
           <li>
-            <a 
-              href="https://x.com/bridget_amana" 
-              target="_blank" 
+            <a
+              href="https://x.com/bridget_amana"
+              target="_blank"
               rel="noopener noreferrer"
             >
               Twitter
             </a>
           </li>
           <li>
-            <a 
-              href="https://www.linkedin.com/in/bridget-amana/" 
-              target="_blank" 
+            <a
+              href="https://www.linkedin.com/in/bridget-amana/"
+              target="_blank"
               rel="noopener noreferrer"
             >
               LinkedIn
             </a>
           </li>
           <li>
-            <a 
-              href="https://github.com/Bridgetamana" 
-              target="_blank" 
+            <a
+              href="https://github.com/Bridgetamana"
+              target="_blank"
               rel="noopener noreferrer"
             >
               GitHub
             </a>
           </li>
-        </ul>        
+        </ul>
         <p class="attribute">Developed by yours truly</p>
       </div>
     </footer>
