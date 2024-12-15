@@ -1,7 +1,6 @@
 const circle = document.getElementById('circle');
 const body = document.body;
-var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/click.mp3');
-var audio2 = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3');
+var audio = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/clickUp.mp3');
 const savedTheme = localStorage.getItem('theme');
 
 if (savedTheme) {
@@ -19,7 +18,7 @@ circle.addEventListener('click', function () {
   if (isDarkMode) {
     audio.play(); 
   } else {
-    audio2.play(); 
+    audio.play(); 
   }
 
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
