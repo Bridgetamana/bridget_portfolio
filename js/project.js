@@ -58,32 +58,37 @@ if (currentProject) {
   document.getElementById("project-title").textContent = currentProject.title;
   document.getElementById("project-description").textContent = currentProject.description;
   document.getElementById("project-challenges").textContent = currentProject.challenges;
-  document.getElementById("project-image").src = currentProject.image;
-  document.getElementById("project-image").alt = currentProject.title;
+  const projectImageContainer = document.getElementById("project-image-container");
+  projectImageContainer.innerHTML = `
+    <picture>
+      <source srcset="${currentProject.image.replace('.png', '.webp')}" type="image/webp" />
+      <img src="${currentProject.image}" alt="${currentProject.title}" loading="lazy" />
+    </picture>
+  `;
 
   const moreImagesContainer = document.getElementById("project-more-images");
   moreImagesContainer.innerHTML = ''; 
   if (currentProject.moreImage && currentProject.moreImage.length > 0) {
     currentProject.moreImage.forEach(imageSrc => {
-      const img = document.createElement("img");
-      img.src = imageSrc;
-      img.alt = `Additional image for ${currentProject.title}`;
-      img.className = "additional-image"; 
-      moreImagesContainer.appendChild(img);
+      const picture = document.createElement("picture");
+      picture.innerHTML = `
+        <source srcset="${imageSrc.replace('.png', '.webp')}" type="image/webp" />
+        <img src="${imageSrc}" alt="Additional image for ${currentProject.title}" class="additional-image" loading="lazy" />
+      `;
+      moreImagesContainer.appendChild(picture);
     });
   }
 
   const toolsList = document.getElementById("project-tools");
   toolsList.innerHTML = '';
-  const featuresList = document.getElementById("project-features");
-  featuresList.innerHTML = '';
-  
   currentProject.tools.forEach(tool => {
     const li = document.createElement("li");
     li.textContent = tool;
     toolsList.appendChild(li);
   });
-  
+
+  const featuresList = document.getElementById("project-features");
+  featuresList.innerHTML = '';
   if (currentProject.features) {
     currentProject.features.forEach(feature => {
       const li = document.createElement("li");
@@ -91,9 +96,6 @@ if (currentProject) {
       featuresList.appendChild(li);
     });
   }
-
-  document.getElementById("project-image").src = currentProject.image;
-  document.getElementById("project-image").alt = currentProject.title;
 
   document.getElementById("project-demo").href = currentProject.demoLink;
   document.getElementById("project-repo").href = currentProject.repoLink;

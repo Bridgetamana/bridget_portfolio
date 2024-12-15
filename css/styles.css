@@ -1,3 +1,38 @@
+@font-face {
+  font-family: 'kalambold';
+  src: url('../fonts/Kalam/kalam-bold-webfont.woff2') format('woff2'), url('../fonts/Kalam/kalam-bold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kalamlight';
+  src: url('../fonts/Kalam/kalam-light-webfont.woff2') format('woff2'), url('../fonts/Kalam/kalam-light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'kalamregular';
+  src: url('../fonts/Kalam/kalam-regular-webfont.woff2') format('woff2'), url('../fonts/Kalam/kalam-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansitalic';
+  src: url('opensans-italic-variablefont_wdthwght-webfont.woff2') format('woff2'), url('opensans-italic-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'open_sansregular';
+  src: url('opensans-variablefont_wdthwght-webfont.woff2') format('woff2'), url('opensans-variablefont_wdthwght-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 *,
 *::before,
 *::after {
@@ -176,7 +211,7 @@ h2,
 .hero-container {
   flex-direction: column;
   justify-content: center;
-  font-family: "Stylish", serif;
+  font-family: "Kalam", cursive;
   margin-top: 50px;
   margin-bottom: 1rem;
   position: relative;
@@ -195,7 +230,7 @@ h2,
 .hero-text {
   font-size: 11.5vw;
   display: flex;
-  font-family: "Stylish", serif;
+  font-family: "Kalam", cursive;
   font-weight: bold;
   letter-spacing: 8px;
   justify-content: center;
@@ -413,7 +448,7 @@ h2,
 }
 
 h2 {
-  font-family: "Stylish", serif;
+  font-family: "Kalam", cursive;
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 6px;

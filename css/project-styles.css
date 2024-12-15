@@ -118,7 +118,7 @@
   opacity: 0.85;
 }
 
-#project-image {
+#project-image-container {
   width: 100%;
   border-radius: 8px;
   margin: var(--spacing-2xl) 0;

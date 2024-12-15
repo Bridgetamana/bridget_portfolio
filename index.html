@@ -39,18 +39,6 @@
       href="./images/favicon-32x32.png"
       type="image/x-icon"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Stylish&display=swap"
-      rel="stylesheet"
-    />
-
     <script
       src="https://kit.fontawesome.com/e1c45fbebb.js"
       crossorigin="anonymous"
@@ -175,11 +163,17 @@
         <div class="project-layout">
           <a href="project.html?id=1" class="project-clipping" style="--rotation: -3deg">
             <div class="project-image">
-              <img
-                src="./images/EventCentral-screenshot.png"
-                alt="EventHub Project"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="./images/EventCentral-screenshot.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/EventCentral-screenshot.png"
+                  alt="EventHub Project"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <div class="project-details">
               <h3 class="project-title">EventHub</h3>
@@ -193,11 +187,17 @@
 
           <a href="project.html?id=2" class="project-clipping" style="--rotation: 2deg">
             <div class="project-image">
-              <img
-                src="./images/academia-screenshot2.png"
-                alt="Academia LMS Project"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="./images/academia-screenshot2.webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/academia-screenshot2.png"
+                  alt="Academia LMS Project"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <div class="project-details">
               <h3 class="project-title">Academia LMS</h3>
@@ -209,30 +209,42 @@
           </a>
 
           <a href="project.html?id=3" class="project-clipping" style="--rotation: -3deg">
-            <div class="project-image">
+          <div class="project-image">
+            <picture>
+              <source
+                srcset="./images/wordunscrambler-screenshot.webp"
+                type="image/webp"
+              />
               <img
-                src="images/wordunscrambler-screenshot.png"
+                src="./images/wordunscrambler-screenshot.png"
                 alt="Word Unscrambler Project"
                 loading="lazy"
               />
+            </picture>
+          </div>
+          <div class="project-details">
+            <h3 class="project-title">Word Unscrambler</h3>
+            <div class="project-tags">
+              <span class="project-tag">HTML</span>
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">CSS</span>
             </div>
-            <div class="project-details">
-              <h3 class="project-title">Word Unscrambler</h3>
-              <div class="project-tags">
-                <span class="project-tag">HTML</span>
-                <span class="project-tag">JavaScript</span>
-                <span class="project-tag">CSS</span>
-              </div>
-            </div>
-          </a>
+          </div>
+        </a>
 
           <a href="project.html?id=4" class="project-clipping" style="--rotation: 2deg">
             <div class="project-image">
-              <img
-                src="./images/onlinestore-screenshot (2).png"
-                alt="Online Store Project"
-                loading="lazy"
-              />
+              <picture>
+                <source
+                  srcset="./images/onlinestore-screenshot (2).webp"
+                  type="image/webp"
+                />
+                <img
+                  src="./images/onlinestore-screenshot (2).png"
+                  alt="Online Store Project"
+                  loading="lazy"
+                />
+              </picture>
             </div>
             <div class="project-details">
               <h3 class="project-title">Timbu online store</h3>
