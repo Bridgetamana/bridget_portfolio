@@ -410,7 +410,7 @@ h2 {
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  background-image: url("/images/noise.jpg");
+  background-image: url("../images/noise.webp");
   background-size: cover;
   opacity: 0.05;
   pointer-events: none;
@@ -479,17 +479,17 @@ footer {
 
 .cta-container p {
   font-size: 16px;
-  margin-bottom: 28px;
+  margin-bottom: 32px;
   font-family: "Kalam", cursive;
 }
 
 .cta-button {
   background-color: #333;
   color: #fff;
-  padding: 12px 24px;
+  padding: 16px 26px;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 18px;
   transition: background-color 0.3s ease;
 }
 
