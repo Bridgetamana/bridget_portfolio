@@ -14,24 +14,16 @@ if (savedTheme) {
 
 circle.addEventListener('click', function () {
   const isDarkMode = body.classList.toggle('dark-mode');
-
-  if (isDarkMode) {
-    audio.play(); 
-  } else {
-    audio.play(); 
-  }
+  audio.play(); 
 
   localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
 
-  if (isDarkMode) {
-    circle.style.transform = 'rotate(180deg)';
-  } else {
-    circle.style.transform = 'rotate(0)';
-  }
+  circle.style.transform = isDarkMode ? 'rotate(180deg)' : 'rotate(0)';
 });
 
 if (savedTheme === 'dark') {
   body.classList.add('dark-mode');
+  circle.style.transform = 'rotate(180deg)';
 }
 
 document.addEventListener('DOMContentLoaded', () => {
