@@ -119,3 +119,98 @@ projectLinks.forEach(link => {
     customCursor.style.transform = 'translate(-50%, -50%) scale(0)';
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', async () => {
+  const eyeButton = document.querySelector('.eye-button');
+  const viewCount = document.querySelector('.view-count');
+  
+  async function getVisitorIP() {
+    try {
+      const response = await fetch('https://api.ipify.org?format=json');
+      const data = await response.json();
+      return data.ip;
+    } catch (error) {
+      console.error('Error fetching IP:', error);
+      return null;
+    }
+  }
+
+  let viewerIP = await getVisitorIP();
+  
+  if (!viewerIP) {
+    eyeButton.classList.add('disabled');
+    return;
+  }
+
+  const clickedIPs = JSON.parse(localStorage.getItem('clicked_ips') || '[]');
+  const totalClicks = parseInt(localStorage.getItem('total_clicks') || '0');
+  
+  viewCount.textContent = totalClicks;
+  
+  if (clickedIPs.includes(viewerIP)) {
+    eyeButton.classList.add('disabled');
+  }
+  
+  eyeButton.addEventListener('click', () => {
+    if (!eyeButton.classList.contains('disabled')) {
+      const newTotal = totalClicks + 1;
+      localStorage.setItem('total_clicks', newTotal);
+      viewCount.textContent = newTotal;
+      
+      clickedIPs.push(viewerIP);
+      localStorage.setItem('clicked_ips', JSON.stringify(clickedIPs));
+      
+      eyeButton.classList.add('clicked');
+      setTimeout(() => {
+        eyeButton.classList.remove('clicked');
+      }, 500);
+      
+      eyeButton.classList.add('disabled');
+    }
+  });
+});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//   const eyeButton = document.querySelector('.eye-button');
+//   const viewCount = document.querySelector('.view-count');
+//   const STORAGE_KEY = 'portfolio_view_count';
+//   const USER_CLICKED_KEY = 'user_clicked';
+  
+//   // Initialize view count from localStorage or set to 0
+//   let count = parseInt(localStorage.getItem(STORAGE_KEY) || '0');
+//   viewCount.textContent = count.toString();
+  
+//   // Check if user has already clicked
+//   const hasClicked = localStorage.getItem(USER_CLICKED_KEY) === 'true';
+  
+//   eyeButton.addEventListener('click', () => {
+//     if (!hasClicked) {
+//       // Increment count
+//       count++;
+//       viewCount.textContent = count.toString();
+      
+//       // Save to localStorage
+//       localStorage.setItem(STORAGE_KEY, count.toString());
+//       localStorage.setItem(USER_CLICKED_KEY, 'true');
+      
+//       // Add animation class
+//       eyeButton.classList.add('clicked');
+      
+//       // Remove animation class after animation completes
+//       setTimeout(() => {
+//         eyeButton.classList.remove('clicked');
+//       }, 500);
+      
+//       // Disable button
+//       eyeButton.style.cursor = 'default';
+//       eyeButton.style.opacity = '0.7';
+//     }
+//   });
+  
+//   // If user has already clicked, disable button
+//   if (hasClicked) {
+//     eyeButton.style.cursor = 'default';
+//     eyeButton.style.opacity = '0.7';
+//   }
+// });
