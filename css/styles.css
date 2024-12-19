@@ -159,7 +159,7 @@ h2,
 }
 
 .hero-text {
-  font-size: 11.5vw;
+  font-size: clamp(2rem, 11.5vw, 6rem);
   display: flex;
   font-family: "Kalam", cursive;
   font-weight: bold;
@@ -478,9 +478,8 @@ footer {
 }
 
 .cta-container p {
-  font-size: 16px;
-  margin-bottom: 32px;
-  font-family: "Kalam", cursive;
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 2rem;
 }
 
 .cta-button {
