@@ -124,7 +124,10 @@ projectLinks.forEach(link => {
 document.addEventListener('DOMContentLoaded', async () => {
   const eyeButton = document.querySelector('.eye-button');
   const viewCount = document.querySelector('.view-count');
-  
+
+  const BIN_URL = 'https://api.jsonbin.io/v3/b/6764b684ad19ca34f8de0b0c'; 
+  const API_KEY = '$2a$10$TWV99gKUm1V0FqY2K6Mcqu.rTUQjiVq9x5P61uEuLYJsEULdloipy'; 
+
   async function getVisitorIP() {
     try {
       const response = await fetch('https://api.ipify.org?format=json');
@@ -136,40 +139,57 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  let viewerIP = await getVisitorIP();
-  
-  if (!viewerIP) {
+  async function fetchBinData() {
+    const response = await fetch(BIN_URL, {
+      headers: {
+        'X-Master-Key': API_KEY
+      }
+    });
+    const result = await response.json();
+    return result.record;
+  }
+
+  async function updateBinData(data) {
+    await fetch(BIN_URL, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+        'X-Master-Key': API_KEY
+      },
+      body: JSON.stringify(data)
+    });
+  }
+
+  const visitorIP = await getVisitorIP();
+  if (!visitorIP) {
     eyeButton.classList.add('disabled');
     return;
   }
 
-  const clickedIPs = JSON.parse(localStorage.getItem('clicked_ips') || '[]');
-  const totalClicks = parseInt(localStorage.getItem('total_clicks') || '0');
-  
-  viewCount.textContent = totalClicks;
-  
-  if (clickedIPs.includes(viewerIP)) {
+  const binData = await fetchBinData();
+  viewCount.textContent = binData.totalClicks;
+
+  if (binData.clickedIPs.includes(visitorIP)) {
     eyeButton.classList.add('disabled');
   }
-  
-  eyeButton.addEventListener('click', () => {
+
+  eyeButton.addEventListener('click', async () => {
     if (!eyeButton.classList.contains('disabled')) {
-      const newTotal = totalClicks + 1;
-      localStorage.setItem('total_clicks', newTotal);
-      viewCount.textContent = newTotal;
-      
-      clickedIPs.push(viewerIP);
-      localStorage.setItem('clicked_ips', JSON.stringify(clickedIPs));
-      
-      eyeButton.classList.add('clicked');
+      binData.totalClicks += 1;
+      binData.clickedIPs.push(visitorIP);
+
+      await updateBinData(binData);
+
+      viewCount.textContent = binData.totalClicks;
+      eyeButton.classList.add('clicked', 'disabled');
+
       setTimeout(() => {
         eyeButton.classList.remove('clicked');
       }, 500);
-      
-      eyeButton.classList.add('disabled');
     }
   });
 });
+
 
 // document.addEventListener('DOMContentLoaded', () => {
 //   const eyeButton = document.querySelector('.eye-button');
