@@ -154,12 +154,14 @@ h2,
   color: var(--light-bg-color);
   padding: 0.5rem 1rem;
   text-transform: uppercase;
+  font-family: "Stylish", serif;
   letter-spacing: 2px;
   margin-bottom: 1rem;
 }
 
 .hero-text {
   font-size: clamp(2rem, 11.5vw, 6rem);
+  font-family: "Stylish", serif;
   display: flex;
   font-weight: bold;
   letter-spacing: 6px;
@@ -234,6 +236,7 @@ h2,
   overflow: hidden;
   z-index: 1;
   margin-top: 1.5rem;
+  font-size: 14px;
 }
 
 .cv-link::before {
@@ -322,7 +325,8 @@ h2,
 h2 {
   font-size: 1.5rem;
   margin-bottom: 3rem;
-  font-family: 'Ubuntu', sans-serif;
+  /* font-family: 'Ubuntu', sans-serif; */
+    font-family: "Stylish", serif;
   font-weight: 700;
   transition: font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
 }
@@ -616,9 +620,6 @@ footer {
   .project-layout {
     grid-template-columns: 1fr 1fr;
   }
-  .hero-container, h2 {
-    font-family: "Kalam", cursive;
-  }
 }
 
 @media (min-width: 1000px) {
@@ -711,6 +712,7 @@ footer {
   padding: 0.5rem 1rem;
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.1);
+  color: var(--light-text-color);
   backdrop-filter: blur(5px);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -766,8 +768,9 @@ footer {
 
 .article-number {
   font-size: 1.5rem;
-  font-family: 'Ubuntu', monospace;
-  opacity: 0.7;
+  /* font-family: 'Ubuntu', monospace; */
+
+  font-family: "Stylish", serif;  opacity: 0.7;
   transition: all 0.3s ease;
 }
 
