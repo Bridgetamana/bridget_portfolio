@@ -103,7 +103,7 @@ nav > ul,
 
 header {
   justify-content: space-between;
-  padding: 2.5rem 3vw;
+  padding: 2.5rem 0;
   font-size: 0.75rem;
 }
 
@@ -207,11 +207,6 @@ h2,
 .hero-text span:nth-child(2)::before {
   content: "\2605";
   font-size: 1.2em;
-}
-
-.hero-text span:nth-child(6)::before {
-  content: "\263A";
-  font-size: 1em;
 }
 
 .hero-text span:hover {
@@ -861,5 +856,71 @@ time {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+  }
+}
+
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  position: relative;
+  padding: 2rem;
+}
+
+.hero-name {
+  position: relative;
+  font-family: "Stylish", serif;
+  font-weight: bold;
+  line-height: 0.9;
+  margin: 0;
+}
+
+.first-name,
+.last-name {
+  font-size: clamp(5rem, 15vw, 10rem);
+}
+
+.hero-name::before {
+  content: "Frontend Developer";
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+  color: var(--light-text-color);
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  white-space: nowrap;
+  transform: rotate(10deg);
+}
+
+.hero-name::after {
+  content: "Technical Writer";
+  position: absolute;
+  bottom: -10%;
+  left: 10%;
+  font-size: clamp(0.75rem, 2.5vw, 1rem);
+    color: var(--light-text-color);
+  padding: 0.5em 1em;
+  border-radius: 2em;
+  white-space: nowrap;
+  transform: rotate(-5deg);
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    min-height: 35vh;
+  }
+
+  .hero-name::before {
+    top: -20%;
+    right: 0;
+    transform: rotate(5deg);
+  }
+
+  .hero-name::after {
+    bottom: -15%;
+    left: 0;
+    transform: rotate(-3deg);
   }
 }

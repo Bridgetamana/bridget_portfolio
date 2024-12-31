@@ -24,56 +24,73 @@
     />
     <meta property="og:image" content="./images/bridget-photo.webp" />
     <meta property="og:type" content="website" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/e1c45fbebb.js"
       crossorigin="anonymous"
       defer
     ></script>
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="preload" href="./fonts/Kalam/kalam-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Kalam/kalam-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Kalam/kalam-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Stylish/stylish-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <style>
       @font-face {
         font-family: "kalambold";
-        src: url("../fonts/Kalam/kalam-bold-webfont.woff2") format("woff2"),
-          url("../fonts/Kalam/kalam-bold-webfont.woff") format("woff");
-        font-weight: normal;
-        font-style: normal;
+        src: url("./fonts/Kalam/kalam-bold-webfont.woff2") format("woff2"),
+          url("./fonts/Kalam/kalam-bold-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: bold;
+        font-display: swap;
       }
 
       @font-face {
         font-family: "kalamlight";
-        src: url("../fonts/Kalam/kalam-light-webfont.woff2") format("woff2"),
-          url("../fonts/Kalam/kalam-light-webfont.woff") format("woff");
-        font-weight: normal;
+        src: url("./fonts/Kalam/kalam-light-webfont.woff2") format("woff2"),
+          url("./fonts/Kalam/kalam-light-webfont.woff") format("woff");
+        font-weight: lighter;
         font-style: normal;
+        font-display: swap;
       }
 
       @font-face {
         font-family: "kalamregular";
-        src: url("../fonts/Kalam/kalam-regular-webfont.woff2") format("woff2"),
-          url("../fonts/Kalam/kalam-regular-webfont.woff") format("woff");
+        src: url("./fonts/Kalam/kalam-regular-webfont.woff2") format("woff2"),
+          url("./fonts/Kalam/kalam-regular-webfont.woff") format("woff");
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
       }
 
       @font-face {
         font-family: "open_sansitalic";
-        src: url("opensans-italic-variablefont_wdthwght-webfont.woff2")
+        src: url("./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff2")
             format("woff2"),
-          url("opensans-italic-variablefont_wdthwght-webfont.woff")
+          url("./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff")
             format("woff");
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
       }
 
       @font-face {
         font-family: "open_sansregular";
-        src: url("opensans-variablefont_wdthwght-webfont.woff2") format("woff2"),
-          url("opensans-variablefont_wdthwght-webfont.woff") format("woff");
+        src: url("./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"),
+          url("./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff") format("woff");
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "stylish";
+        src: url("./fonts/Stylish/stylish-regular-webfont.woff2") format("woff2"),
+          url("./fonts/Stylish/stylish-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
       }
     </style>
   </head>
@@ -91,19 +108,11 @@
     </header>
 
     <main id="main-content">
-      <section id="hero">
+      <section class="hero">
         <div class="hero-container">
-          <div class="frontend-pill">Frontend Developer</div>
-          <h1 class="hero-text">
-            <span>P</span>
-            <span></span>
-            <span>r</span>
-            <span>t</span>
-            <span>f</span>
-            <span></span>
-            <span>l</span>
-            <span>i</span>
-            <span>o</span>
+          <h1 class="hero-name">
+            <div class="first-name">Bridget</div>
+            <div class="last-name">Amana</div>
           </h1>
         </div>
         <h2>Bio .</h2>
@@ -315,6 +324,25 @@
             <div class="article-content">
               <span class="article-number">01</span>
               <div class="article-details">
+                <h3>How to Add a Clickable Visitor Counter to Your Website
+                </h3>
+                <p>We’ll walk through building a fully functional view counter step by step. </p>
+                <div class="article-meta">
+                  <time>Dec 2024</time>
+                  <a href="https://dev.to/bridget_amana/how-to-add-a-clickable-visitor-counter-to-your-website-l9p" class="article-link">
+                    Read More
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          
+          <article class="article-card">
+            <div class="article-content">
+              <span class="article-number">02</span>
+              <div class="article-details">
                 <h3>CSS Specificity Explained
                 </h3>
                 <p>How to Control Which CSS Styles Win.</p>
@@ -333,7 +361,7 @@
       
           <article class="article-card">
             <div class="article-content">
-              <span class="article-number">02</span>
+              <span class="article-number">03</span>
               <div class="article-details">
                 <h3>Start Your Frontend Project Right: Key Preparations
                 </h3>
@@ -353,7 +381,7 @@
       
           <article class="article-card">
             <div class="article-content">
-              <span class="article-number">03</span>
+              <span class="article-number">04</span>
               <div class="article-details">
                 <h3>The developer roadmap YOU need
                 </h3>
@@ -373,7 +401,7 @@
       
           <article class="article-card">
             <div class="article-content">
-              <span class="article-number">04</span>
+              <span class="article-number">05</span>
               <div class="article-details">
                 <h3>Creating a custom cursor for your website
                 </h3>
@@ -393,7 +421,7 @@
       
           <article class="article-card">
             <div class="article-content">
-              <span class="article-number">05</span>
+              <span class="article-number">06</span>
               <div class="article-details">
                 <h3>How to Easily Add Dark Mode to Your Website
                 </h3>
