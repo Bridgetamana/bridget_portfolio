@@ -9,11 +9,71 @@
       href="./images/favicon-32x32.png"
       type="image/x-icon"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/project-styles.css" />
+    <link rel="preload" href="./fonts/Kalam/kalam-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Kalam/kalam-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Kalam/kalam-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Stylish/stylish-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff2" as="font" type="font/woff2" crossorigin>
+    <style>
+      @font-face {
+        font-family: "kalambold";
+        src: url("./fonts/Kalam/kalam-bold-webfont.woff2") format("woff2"),
+          url("./fonts/Kalam/kalam-bold-webfont.woff") format("woff");
+        font-weight: bold;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "kalamlight";
+        src: url("./fonts/Kalam/kalam-light-webfont.woff2") format("woff2"),
+          url("./fonts/Kalam/kalam-light-webfont.woff") format("woff");
+        font-weight: lighter;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "kalamregular";
+        src: url("./fonts/Kalam/kalam-regular-webfont.woff2") format("woff2"),
+          url("./fonts/Kalam/kalam-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "open_sansitalic";
+        src: url("./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff2")
+            format("woff2"),
+          url("./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff")
+            format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "open_sansregular";
+        src: url("./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"),
+          url("./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      @font-face {
+        font-family: "stylish";
+        src: url("./fonts/Stylish/stylish-regular-webfont.woff2") format("woff2"),
+          url("./fonts/Stylish/stylish-regular-webfont.woff") format("woff");
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+    </style>
   </head>
 
   <body>
