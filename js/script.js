@@ -127,7 +127,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const BIN_URL = 'https://api.jsonbin.io/v3/b/6764b684ad19ca34f8de0b0c'; 
   const API_KEY = '$2a$10$TWV99gKUm1V0FqY2K6Mcqu.rTUQjiVq9x5P61uEuLYJsEULdloipy'; 
-
+  
+  viewCount.style.visibility = 'hidden';
+  
   async function getVisitorIP() {
     try {
       const response = await fetch('https://api.ipify.org?format=json');
@@ -168,7 +170,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   const binData = await fetchBinData();
   viewCount.textContent = binData.totalClicks;
-
+  viewCount.style.visibility = 'visible';
+  
   if (binData.clickedIPs.includes(visitorIP)) {
     eyeButton.classList.add('disabled');
   }
