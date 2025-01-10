@@ -77,7 +77,6 @@ footer {
 #hero,
 #skills,
 #projects,
-#what-i-offer,
 #articles,
 footer {
   padding: 2rem 0;
@@ -92,10 +91,6 @@ nav > ul,
 .polaroid-details {
   align-items: center;
   display: flex;
-}
-
-.nav > ul {
-  gap: 8px;
 }
 
 header {
@@ -279,12 +274,6 @@ footer {
   font-size: 14px;
   line-height: 1.5;
   opacity: 0.9;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 28px;
 }
 
 #custom-cursor {
