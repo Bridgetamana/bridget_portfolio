@@ -1,145 +1,3 @@
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-li {
-  list-style: none;
-}
-
-button {
-  border: 0;
-  background-color: transparent;
-}
-
-:root {
-  --light-bg-color: #ddd;
-  --light-text-color: #1d1d1d;
-  --light-gray: #6c6c6c;
-  --tool-bg-color: rgba(194, 194, 194, 0.4);
-  --dark-bg-color: #141414;
-  --dark-text-color: #dfd3c3;
-  --dark-gray: #9c9c9c;
-  --dark-tool-bg-color: rgba(0, 0, 0, 0.4);
-}
-
-.dark-mode {
-  --light-bg-color: var(--dark-bg-color);
-  --light-text-color: var(--dark-text-color);
-  --tool-bg-color: var(--dark-tool-bg-color);
-  --light-gray: var(--dark-gray);
-}
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-  font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
-  background-color: var(--light-bg-color);
-  color: var(--light-text-color);
-  letter-spacing: 0.5px;
-}
-
-body:before {
-  content: "";
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  background-image: url(../images/noise.webp);
-  background-size: cover;
-  opacity: 0.05;
-  z-index: -1000;
-}
-
-main,
-header,
-footer {
-  width: 95%;
-  max-width: 70rem;
-  margin: 0 auto;
-}
-
-#hero,
-#skills,
-#projects,
-#what-i-offer,
-#articles,
-footer {
-  padding: 2rem 0;
-}
-
-header,
-nav > ul,
-.nav-links,
-.dark-mode-toggle,
-.hero-container,
-.polaroid-name,
-.polaroid-details {
-  align-items: center;
-  display: flex;
-}
-
-.nav > ul {
-  gap: 8px;
-}
-
-header {
-  justify-content: space-between;
-  padding: 2.5rem 0;
-  font-size: 0.75rem;
-}
-
-nav > ul,
-.offer-card {
-  justify-content: flex-end;
-}
-
-.nav-links li,
-h2,
-.socials li,
-.project-title,
-.hero-text,
-.frontend-pill {
-  text-transform: uppercase;
-}
-
-.nav-links {
-  height: 32px;
-  transition: color 0.3s ease;
-}
-
-.nav-links li {
-  transition: opacity 0.3s ease;
-  letter-spacing: 2px;
-  padding: 3px 2px;
-}
-
-.nav-links:hover li a {
-  opacity: 0.5;
-}
-
-.nav-links li:hover a {
-  opacity: 1;
-}
-
 .hero-container {
   flex-direction: column;
   justify-content: center;
@@ -262,14 +120,6 @@ h2,
   font-weight: 600;
 }
 
-h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-  font-family: "Stylish", serif;
-  font-weight: 700;
-  transition: font-size 0.2s cubic-bezier(0.215, 0.61, 0.355, 1) 0.6s;
-}
-
 .skills {
   padding: 0.5rem 0;
   font-size: 1.75rem;
@@ -336,148 +186,6 @@ h2 {
   text-transform: uppercase;
 }
 
-.circle {
-  position: relative;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: linear-gradient(to right, #ddd 50%, #141414 50%);
-}
-
-.circle:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background-image: url("../images/noise.webp");
-  background-size: cover;
-  opacity: 0.05;
-  pointer-events: none;
-}
-
-.dark-mode-toggle {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  z-index: 40;
-  justify-content: center;
-  width: 25px;
-  height: 25px;
-  transition: transform 0.3s ease;
-}
-
-.dark-mode-toggle:hover {
-  transform: scale(1.1) rotate(180deg);
-}
-
-.circle:hover {
-  transform: rotate(180deg);
-  transition: transform 0.3s ease-in-out;
-}
-
-.skip-link {
-  position: absolute;
-  top: -60px;
-  left: 0;
-  background: var(--light-bg-color);
-  color: var(--light-text-color);
-  padding: 6px;
-  z-index: 100;
-  text-decoration: none;
-}
-
-.skip-link:focus {
-  top: 0;
-}
-
-footer {
-  margin: 4rem auto;
-}
-
-.cta-container {
-  padding: 4rem 2rem;
-  background-color: var(--light-text-color);
-  color: var(--light-bg-color);
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.cta-container h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  font-family: "Open Sans", sans-serif;
-}
-
-.cta-container p {
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  margin-bottom: 2rem;
-}
-
-.cta-button {
-  background-color: #333;
-  color: #fff;
-  padding: 16px 26px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-size: 18px;
-  transition: background-color 0.3s ease;
-  width: 50%;
-  margin: auto;
-}
-
-.cta-button:hover {
-  background-color: #555;
-}
-
-.socials {
-  width: 100%;
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.socials li {
-  letter-spacing: 2px;
-  cursor: pointer;
-  padding: 0 2px;
-  transition: opacity 0.3s ease;
-}
-
-.socials:hover li {
-  opacity: 0.5;
-}
-
-.socials li:hover {
-  opacity: 1;
-}
-
-.attribute {
-  width: 100%;
-  text-align: center;
-  padding-top: 30px;
-  font-size: 14px;
-  line-height: 1.5;
-  opacity: 0.9;
-}
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  column-gap: 28px;
-}
-
 @media (min-width: 500px) {
   .hero-text {
     letter-spacing: 12px;
@@ -518,22 +226,9 @@ footer {
 }
 
 @media (min-width: 768px) {
-  nav {
-    width: 380px;
-  }
-
-  nav > ul {
-    gap: 18px;
-  }
-
   .polaroid {
     max-width: 350px;
     margin-top: 0;
-  }
-
-  .socials {
-    display: flex;
-    gap: 12px;
   }
 
   .bottom div {
@@ -541,21 +236,6 @@ footer {
     gap: 4px;
   }
 
-  .footer-bottom {
-    display: flex;
-  }
-
-  .socials {
-    justify-content: flex-start;
-  }
-
-  .attribute {
-    text-align: right;
-  }
-
-  header {
-    font-size: 0.85rem;
-  }
   .project-layout {
     grid-template-columns: 1fr 1fr;
   }
@@ -577,16 +257,6 @@ footer {
     width: 60%;
   }
 
-  .circle {
-    width: 30px;
-    height: 30px;
-  }
-
-  .dark-mode-toggle {
-    width: 30px;
-    height: 30px;
-  }
-
   .offer-card {
     flex-grow: 1;
     flex-basis: calc(25% - 1rem);
@@ -602,32 +272,6 @@ footer {
 .project-clipping.project-reveal {
   opacity: 1;
   transform: scale(1) translateY(0);
-}
-
-#custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100px;
-  height: 100px;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: translate(-50%, -50%) scale(0);
-  transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.2s ease;
-  pointer-events: none;
-  z-index: 1000;
-}
-
-@media (pointer: coarse) {
-  #custom-cursor {
-    display: none; 
-  }
 }
 
 .project-clipping:hover ~ #custom-cursor {

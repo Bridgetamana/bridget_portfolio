@@ -9,53 +9,11 @@
       href="./images/favicon-32x32.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/project-styles.css" />
-    <link rel="preload" href="./fonts/Kalam/kalam-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/Kalam/kalam-bold-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/Kalam/kalam-light-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Stylish/stylish-regular-webfont.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff2" as="font" type="font/woff2" crossorigin>
     <style>
-      @font-face {
-        font-family: "kalambold";
-        src: url("./fonts/Kalam/kalam-bold-webfont.woff2") format("woff2"),
-          url("./fonts/Kalam/kalam-bold-webfont.woff") format("woff");
-        font-weight: bold;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "kalamlight";
-        src: url("./fonts/Kalam/kalam-light-webfont.woff2") format("woff2"),
-          url("./fonts/Kalam/kalam-light-webfont.woff") format("woff");
-        font-weight: lighter;
-        font-style: normal;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "kalamregular";
-        src: url("./fonts/Kalam/kalam-regular-webfont.woff2") format("woff2"),
-          url("./fonts/Kalam/kalam-regular-webfont.woff") format("woff");
-        font-weight: normal;
-        font-style: italic;
-        font-display: swap;
-      }
-
-      @font-face {
-        font-family: "open_sansitalic";
-        src: url("./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff2")
-            format("woff2"),
-          url("./fonts/Open_Sans/opensans-italic-variablefont_wdthwght-webfont.woff")
-            format("woff");
-        font-weight: normal;
-        font-style: normal;
-        font-display: swap;
-      }
-
       @font-face {
         font-family: "open_sansregular";
         src: url("./fonts/Open_Sans/opensans-variablefont_wdthwght-webfont.woff2") format("woff2"),
@@ -77,8 +35,9 @@
   </head>
 
   <body>
+    <a href="#main-content" class="skip-to-main">Skip to main content</a>
     <header>
-      <a href="/">B / A</a>
+      <a href="/" title="Back to Homepage">B / A</a>
       <nav>
         <ul class="nav-links">
           <li><a href="/#hero">About /</a></li>
@@ -87,7 +46,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="project-details-container" id="project-details">
         <h1 id="project-title"></h1>
         <div class="project-intro">
