@@ -43,9 +43,43 @@ const projects = [
     tools: ["TypeScript", "React", "Timbu Api", "Context API"],
     features: ["Dynamic product listing from Timbu API", "Detailed product view", "Product search functionality", "Price range filters"],
     image: "images/onlinestore-screenshot (2).webp",
-    moreImage: ["images/onlinestore-screenshot.webp", ],
+    moreImage: ["images/onlinestore-screenshot.webp",],
     demoLink: "https://gadgety-store.vercel.app/",
     repoLink: ""
+  },
+  {
+    id: 5,
+    title: "Sprout",
+    description: "Sprout is a web-based plant care companion app designed to help plant enthusiasts discover, care for, and manage their plants. The platform provides tools for finding the perfect plant match, accessing expert care guides.",
+    challenges: "Finding a free indoor plant API was a real challenge. I ended up with the Perenual API, which covers both indoor and outdoor plants. This meant I had to get creative with filtering to make it work for the app's specific needs. It wasn't perfect, but it got the job done. I've got tons of plans to expand this - thinking about adding more features, refining the plant matching, and making it even more user-friendly.",
+    tools: ["React", "Perenual API", "Tailwind CSS", "GitHub Copilot"],
+    features: [
+      "Plant discovery based on user preferences",
+      "Detailed plant care guides",
+      "Responsive design for mobile and desktop"
+    ],
+    image: "images/sprout-screenshot.png",
+    moreImage: [
+      "images/sprout-screenshot2.png",
+    ],
+    demoLink: "https://sprout-ochre.vercel.app/",
+    repoLink: "https://github.com/Bridgetamana/sprout"
+  },
+  {
+    id: 6,
+    title: "Focus",
+    description: "Focus is a minimalistic, one-task-only to-do list designed to combat cognitive overload. Unlike traditional task managers, it displays only one task at a time, encouraging concentration and reducing the urge to multitask.",
+    challenges: "Building Focus was all about solving my own productivity struggles. The biggest challenge was creating an interface that truly helps users concentrate. I had to think carefully about how to design something that keeps you focused on just one task. GitHub Copilot was a huge help, especially in cleaning up code and suggesting improvements. I've got tons of ideas to make this even better in the future.",
+    tools: ["HTML", "CSS", "JavaScript", "GitHub Copilot"],
+    features: [
+      "Single task display",
+      "Morale-boosting task completion",
+      "Minimalist design",
+      "Concentration-focused interface"
+    ],
+    image: "images/focus-screenshot.png",
+    demoLink: "https://bridgetamana.github.io/focus.github.io/",
+    repoLink: "https://github.com/Bridgetamana/focus.github.io"
   },
 ];
 
@@ -61,18 +95,16 @@ if (currentProject) {
   const projectImageContainer = document.getElementById("project-image-container");
   projectImageContainer.innerHTML = `
     <picture>
-      <source srcset="${currentProject.image.replace('.png', '.webp')}" type="image/webp" />
       <img src="${currentProject.image}" alt="${currentProject.title}" loading="lazy" />
     </picture>
   `;
 
   const moreImagesContainer = document.getElementById("project-more-images");
-  moreImagesContainer.innerHTML = ''; 
+  moreImagesContainer.innerHTML = '';
   if (currentProject.moreImage && currentProject.moreImage.length > 0) {
     currentProject.moreImage.forEach(imageSrc => {
       const picture = document.createElement("picture");
       picture.innerHTML = `
-        <source srcset="${imageSrc.replace('.png', '.webp')}" type="image/webp" />
         <img src="${imageSrc}" alt="Additional image for ${currentProject.title}" class="additional-image" loading="lazy" />
       `;
       moreImagesContainer.appendChild(picture);
