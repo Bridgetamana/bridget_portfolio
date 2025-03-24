@@ -39,3 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   skillObserver.observe(skillSection);
 });
+
+
+  function googleMe() {
+    const name = 'Bridget Amana'; 
+    const searchQuery = encodeURIComponent(name);
+    window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank');
+  }
